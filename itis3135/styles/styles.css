@@ -1,16 +1,103 @@
-p {
-    color: blue;
+header{
+    background-color: #454545;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;     
 }
+
+/* START NAVBAR STYLING */
+
+nav {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    font-weight: 450;
+}
+
+nav > ul {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: flex-end;
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #454545; /* mostly visible when screen is smaller */
+}
+
+nav > ul > li {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #454545; /* box color */
+}
+
+nav > ul > li > a {
+    text-decoration: none; /* remove underline */
+    display: block;
+    text-align: center;
+    padding: 15px 10px;
+    color: #f1fffa; /* text color */
+}
+
+nav > ul > li > a:hover {
+    text-decoration: none; /* remove underline */
+    background-color: #785964; /* color of box when hover */
+}
+
+/* fix text centering when screen is small */
+@media (max-width: 600px) {
+    nav > ul {
+        justify-content: center; 
+    }
+}
+
+/* END NAVBAR STYLING */
 
 body{
-    background-color: blue;
-    background: blueviolet;
+    background: #d5c7bc;
 }
 
-header{
-    background: pink;
-    display: flex;
-    width: 100%;
-    
-
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #f1fffa; 
+    font-weight: 100;
+    font-size: 2.2vh;
+    margin-left: 15px;
 }
+
+h2{
+    margin-top: 65px;
+    margin-bottom: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 650;
+}
+
+p, a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer{
+    margin-top: 10px;
+}
+
+footer > a {
+    color: #d62e69;
+}
+
+footer > a:hover{
+    color:#f1611f;
+}
+
+footer > a:visited{
+    color: rgb(83, 83, 236);
+}
+
+img{
+    border: 5px solid #da7439;
+    border-radius: 5px;
+}
+
