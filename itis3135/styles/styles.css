@@ -76,7 +76,7 @@ h2{
     font-weight: 650;
 }
 
-p, a {
+p, a, figcaption, li {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
