@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,44 +10,28 @@
 	<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+    <body>
 
-<header>
-	<h1>Klutzy Hamster || ITIS 3135</h1>
-	
-    <nav> 
-        <ul>
-            <li><a href="./">ITIS-3135 Home</a></li>
-            <li><a href="./introduction.html">Introduction</a></li>
-            <li><a href="./contract.html">Contract</a></li>
-            <li><a href="../">Personal Page</a></li>
-        </ul>
-	</nav>
+        <!-- CONSISTENT HEADER -->
+        <div data-include="components/header.html"></div>
 
-</header>
 
-<main>
-    <h2>ITIS 3135 Home</h2>
-	<p>This is all the content for my ITIS 3135 class</p>
-    <img src="./images/hamster.gif" alt="animation of hamster running on a wheel" width="150px">
+        <main>
+            <h2>ITIS 3135 Home</h2>
+	        <p>This is all the content for my ITIS 3135 class</p>
+            <img src="./images/hamster.gif" alt="animation of hamster running on a wheel" width="150px">
 
 
 
-</main>
+        </main>
 
-<footer>
-    <a href="https://webpages.charlotte.edu/khicks35/">CLT Webspace</a> |
-	<a href="https://github.com/kateh1"> Github</a> |
-	<a href="https://kateh1.github.io"> Github webpage</a> |
-	<a href="https://www.freecodecamp.org/katehi"> FreeCodeCamp</a> |
-    <a href="https://www.codecademy.com/profiles/katehi"> Codeacademy</a> |
-	<a href="https://www.linkedin.com/in/kate-hicks2025/"> Linkedin</a> 
 
-    <p>Designed by Cash Co., Certified in <a href="https://www.freecodecamp.org/certification/katehi/responsive-web-design">Responsive Web Design</a> &#169 2024</p>
+        <!-- CONSISTENT FOOTER -->
+        <div data-include="components/footer.html"></div>
 
-       
-</footer>
+        <!-- script for same header/footer across site-->
+        <script src="scripts/include.js"></script>
 
-</body>
+    </body>
 
 </html>
