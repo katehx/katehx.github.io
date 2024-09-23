@@ -3,6 +3,7 @@ body{
     margin: 0;
 }
 
+
 h2{
     margin-top: 65px;
     margin-bottom: auto;
@@ -10,8 +11,9 @@ h2{
     font-weight: 650;
 }
 
-p, a, figcaption, li {
+p, a, figcaption, li, img {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 20px;
 }
 
 footer{
