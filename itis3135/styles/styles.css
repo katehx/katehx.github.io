@@ -1,5 +1,5 @@
 body{
-    background: #d5c7bc;
+    background: #ffffff;
     margin: 0;
 }
 
@@ -25,7 +25,7 @@ footer > a {
 }
 
 footer > a:hover{
-    color:#f1611f;
+    color:#4136d9;
 }
 
 footer > a:visited{
@@ -33,7 +33,7 @@ footer > a:visited{
 }
 
 img{
-    border: 5px solid #da7439;
+    border: 5px solid #4d37de;
     border-radius: 5px;
 }
 
