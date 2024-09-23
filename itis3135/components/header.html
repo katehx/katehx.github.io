@@ -1,73 +1,65 @@
 <style>
 
-/* START NAVBAR STYLING */
-
-nav {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
-    font-weight: 450;
-}
-
-nav > ul {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: flex-end;
-    list-style-type: none; 
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #454545; /* mostly visible when screen is smaller */
-}
-
-nav > ul > li {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background-color: #454545; /* box color */
-}
-
-nav > ul > li > a {
-    text-decoration: none; /* remove underline */
-    display: block;
-    text-align: center;
-    padding: 15px 10px;
-    color: #f1fffa; /* text color */
-}
-
-nav > ul > li > a:hover {
-    text-decoration: none; /* remove underline */
-    background-color: #785964; /* color of box when hover */
-}
-
-/* fix text centering when screen is small */
-@media (max-width: 600px) {
-    nav > ul {
-        justify-content: center; 
+    header{
+        display: flex;
+        position: sticky;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(90deg, rgb(74, 74, 180), rgb(175, 68, 224));
+        top: 0;
+        
     }
-}
 
-/* END NAVBAR STYLING */
+    header > h1 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-left: 10px;
+        font-size: 20px;
+        color: white;
+    }
 
-h2 {
-    display: flex;
-    width: 100%;
-    height: 5vh;
-    background-color: green;
-    color: blue;
-}
+    nav {
+    /*background-color: #333;*/
+    }
+
+    /* Style the links inside the navigation bar */
+    nav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 17px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    }
+
+    /* Change the color of links on hover */
+    nav a:hover {
+    background-color: #ddd;
+    color: black;
+    }
+
+    /* Add a color to the active/current link */
+    nav a.active {
+    background-color: #04AA6D;
+    color: white;
+    }
+
+        
 
 </style>
 
-<!-- content for header -->
 
-<h1>Klutzy Hamster || ITIS 3135</h1>
+<!-- HEADER CONTENT -->
+<header>
+    <h1>Klutzy Hamster || ITIS 3135</h1>
 
-    <nav> 
-        <ul>
-            <li><a href="./">ITIS-3135 Home</a></li>
-            <li><a href="./introduction.html">Introduction</a></li>
-            <li><a href="./contract.html">Contract</a></li>
-            <li><a href="../">Personal Page</a></li>
-        </ul>
+    <nav>
+        <a href="./">ITIS-3135 Home</a>
+        <a href="./introduction.html">Introduction</a>
+        <a href="./contract.html">Contract</a>
+        <a href="../">Personal Page</a>
 	</nav>
 
-<h2>%page_name%</h2>
+</header>
+<!-- <h3>%page_name%</h2> -->
