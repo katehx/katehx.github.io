@@ -1,12 +1,12 @@
 body{
-    background-color: #9CC4B2;
+    background-color: #468378;
     margin: 0;
 }
 
 
 header, footer{
     background: linear-gradient(90deg, #2A4747, #2f8181);    
-    color: #fff;
+    color: #F3F6F0;
 }
 
 /* header */
@@ -21,7 +21,7 @@ header {
 }
 
 header > h1{
-    color: #ffffff;
+    color: #F3F6F0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 25px;
 }
@@ -31,7 +31,7 @@ header > a > svg {
 }
 
 header > a > svg:hover{
-    stroke: rgb(107, 240, 196);
+    stroke: #e1e48c;
     shape-rendering: auto;
 }
 
@@ -42,8 +42,11 @@ h2.header {
     justify-content: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 70px;
-    color: white;
-    background-color: green;
+    color: #F3F6F0;
+    background-image: url("../images/trees.png");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
     height: 150px;
     margin-top: 0;
     margin-bottom: 0;
@@ -54,10 +57,10 @@ h2.header {
 /* sidebar */
 .sidebar {
     flex: 0 0 475px;
-    color: rgb(89, 126, 246);
+    color: #F3F6F0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: white;
-    border: solid orange 5px;
+    background-color: #F3F6F0;
+    border: solid #F3F6F0 4px;
     border-radius: 15px 15px 15px 15px;
     margin-top: 20px;
     margin-right: 25px;
@@ -66,7 +69,7 @@ h2.header {
 .sidebar > h1 {
     font-size: 40px;
     padding-left: 5px;
-    background-color: blue;
+    background-color: #2f8181;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     height: 60px;
@@ -85,9 +88,9 @@ h2.header {
 
 .sidebar > nav > ul > li > a {
     text-decoration: none;
-    color: green;
+    color: #1C433D;
     font-size: 28px;
-    padding-right: 10px;
+    padding-right: 15px;
 }
 
 /* end sidebar */
@@ -102,19 +105,23 @@ main {
 }
 
 h2 {
-    color: purple;
+    color: #1C433D;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 40px;
 }
 
 p, ul, li, ol, figcaption { 
-    color: orangered;
+    color: #F3F6F0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 25px;
 }
 
+figcaption {
+    color: #1C433D;
+}
+
 nav {
-    color: blue;
+    color: #F3F6F0;
     font-size: 25px;
 }
 
@@ -122,12 +129,12 @@ a {
     text-decoration: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 25px;
-    color: pink;
+    color: #e1e48c;
 }
 
 p.footer {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: red;
+    color: #F3F6F0;
 }
 
 footer{
@@ -138,6 +145,6 @@ footer{
 }
 
 img{
-    border: #000 solid 5px;
+    border: #1C433D solid 5px;
     border-radius: 5px;
 }
