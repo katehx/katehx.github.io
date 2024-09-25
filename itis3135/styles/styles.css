@@ -53,17 +53,22 @@ h2.header {
 
 /* sidebar */
 .sidebar {
-    flex: 0 0 400px;
+    flex: 0 0 450px;
     color: rgb(89, 126, 246);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: white;
     border: solid orange 5px;
+    border-radius: 30px;
     margin-right: 20px;
 }
 
 .sidebar > h1 {
     font-size: 40px;
     padding-left: 5px;
+    background-color: blue;
+    height: 60px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .sidebar > nav > ul{
@@ -74,7 +79,8 @@ h2.header {
 .sidebar > nav > ul > li > a {
     text-decoration: none;
     color: green;
-    font-size: 30px;
+    font-size: 28px;
+    
 }
 
 /* end sidebar */
@@ -83,9 +89,15 @@ main {
     box-sizing: border-box;
     border: solid #000 1px;
     display: flex;
-    margin: 10px 10% 10px 10%;
+    margin: 5% 20% 5% 20%;
+}
+
+h2 {
+    color: purple;
+    font-size: 40px;
 }
 
 p { 
     color: orangered;
+    font-size: 25px;
 }
