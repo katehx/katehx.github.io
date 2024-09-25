@@ -93,8 +93,10 @@ h2.header {
 /* end sidebar */
 
 main {
-    box-sizing: border-box;
-    border: solid #000 1px;
+    /* box-sizing: border-box;
+    border: solid #000 1px; 
+        * for when debugging layout stuff * !!!!!!!!!
+    */ 
     display: flex;
     margin: 5% 20% 5% 20%;
 }
@@ -133,4 +135,9 @@ footer{
     flex-direction: column;
     align-items: center;
     padding: 20px 20px 5px 20px;
+}
+
+img{
+    border: #000 solid 5px;
+    border-radius: 5px;
 }
