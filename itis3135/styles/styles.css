@@ -85,3 +85,7 @@ main {
     display: flex;
     margin: 10px 10% 10px 10%;
 }
+
+p { 
+    color: orangered;
+}
