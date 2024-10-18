@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/styles.css"> 
-        <title>Kate Consulting Co.</title>
+        <title>Tables</title>
         <!-- Accumulus script -->
         <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     </head>
@@ -17,25 +17,168 @@
 
         <main>
 
-            <div>
-                <!-- CONSISTENT SIDEBAR -->
-                <div data-include="components/sidebar.html"></div>
-            </div>
+        	<h2>Activity #2 - HTML Tables - Company</h2>
 
-            <div>
-                <!-- MAIN PAGE CONTENT -->
-				<h2>Activity #2 - HTML Tables - Company</h2>
-				<p><em>Ask us for ideas.</em></p>
+            <h3>My Tabular Data</h3>
+            <ol>
+                <li>Speckles Flufftail, speckles.fluf@rodent.org, 5</li>
+                <li>Leonard Paws, leonard.paws@rodent.org, 7</li>
+                <li>Kip Nibble, kip.nibb@rodent.org, 2</li>
+                <li>Darwin Whisker, darwin.whis@rodent.org, 1</li>
+                <li>Bucky Seedmunch, bucky.seed@rodent.org, 4</li>
+                <li>Hurley Tinyfoot, hurley.tiny@rodent.org, 5</li>
+                <li>Mooch Furryface, mooch.furr@rodent.org, 5</li>
+                <li>Whiskers Nibbles, whiskers.nibb@rodent.org, 8</li>
+                <li>Gizmo Ball, gizmo.ball@rodent.org, 1</li>
+                <li>Snickers Smoosh, snickers.smoo@rodent.org, 3</li>
+            </ol>
+           
+            <h3>Employee Data in simple data</h3>
+            <table>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Employee Email</th>
+                    <th>Years of Service</th>
+                </tr>
+                <tr>
+                    <td>Speckles Flufftail</td>
+                    <td>speckles.fluf@rodent.org</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Leonard Paws</td>
+                    <td>leonard.paws@rodent.org</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Kip Nibble</td>
+                    <td>kip.nibb@rodent.org</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Darwin Whisker</td>
+                    <td>darwin.whis@rodent.org</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Bucky Seedmunch</td>
+                    <td>bucky.seed@rodent.org</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>Hurley Tinyfoot</td>
+                    <td>hurley.tiny@rodent.org</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Mooch Furryface</td>
+                    <td>mooch.furr@rodent.org</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Whiskers Nibbles</td>
+                    <td>whiskers.nibb@rodent.org</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Gizmo Ball</td>
+                    <td>gizmo.ball@rodent.org</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Snickers Smoosh</td>
+                    <td>snickers.smoo@rodent.org</td>
+                    <td>3</td>
+                </tr>
+            </table>
 
+            <figure>
 
-
-            </div>
+                <h3>Employee Data in Complex Table</h3>
+                <table id="complexTable">
+                    <tr>
+                        <th>Rank</th>
+                        <th>Full Name</th>
+                        <th>Employee Email</th>
+                        <th>Years of Service</th>
+                        <th>Salary</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Chief</th>
+                        <td>Speckles Flufftail</td>
+                        <td>speckles.fluf@rodent.org</td>
+                        <td>5</td>
+                        <td>$125,000</td>
+                    </tr>
+                    <tr>
+                        <td>Leonard Paws</td>
+                        <td>leonard.paws@rodent.org</td>
+                        <td>7</td>
+                        <td>$135,000</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="3">Senior</th>
+                        <td>Kip Nibble</td>
+                        <td>kip.nibb@rodent.org</td>
+                        <td>2</td>
+                        <td>$96,000</td>
+                    </tr>
+                    <tr>
+                        <td>Darwin Whisker</td>
+                        <td>darwin.whis@rodent.org</td>
+                        <td>1</td>
+                        <td>$95,000</td>
+                    </tr>
+                    <tr>
+                        <td>Bucky Seedmunch</td>
+                        <td>bucky.seed@rodent.org</td>
+                        <td>4</td>
+                        <td>$101,000</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="5">Junior</th>
+                        <td>Hurley Tinyfoot</td>
+                        <td>hurley.tiny@rodent.org</td>
+                        <td>5</td>
+                        <td>$78,000</td>
+                    </tr>
+                    <tr>
+                        <td>Mooch Furryface</td>
+                        <td>mooch.furr@rodent.org</td>
+                        <td>5</td>
+                        <td>$82,000</td>
+                    </tr>
+                    <tr>
+                        <td>Whiskers Nibbles</td>
+                        <td>whiskers.nibb@rodent.org</td>
+                        <td>8</td>
+                        <td>$88,000</td>
+                    </tr>
+                    <tr>
+                        <td>Gizmo Ball</td>
+                        <td>gizmo.ball@rodent.org</td>
+                        <td>1</td>
+                        <td>$75,000</td>
+                    </tr>
+                    <tr>
+                        <td>Snickers Smoosh</td>
+                        <td>snickers.smoo@rodent.org</td>
+                        <td>3</td>
+                        <td>$84,000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5">Everyone has worked her for 100000 years</td>
+                    </tr>
+                </table>
+                <figcaption>These hamsters are international spys and make lots of money through crime</figcaption>
+            </figure>
+                
 
         </main>
 
 
         <!-- CONSISTENT FOOTER -->
-        <!-- <div data-include="components/footer.html"></div> -->
+        <div data-include="components/footer.html"></div>
 
         <!-- SCRIPT FOR CONSISTENT CONTENT -->
         <script src="scripts/include.js"></script>
