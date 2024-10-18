@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/styles.css"> 
+        <title>Form</title>
+        <!-- Accumulus script -->
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <!-- CONSISTENT HEADER -->
+        <div data-include="components/header.html" data-replace="%page_name%:Activity #3 - Form"></div>
+
+        <main>
+
+        	<h2>Activity #3 - HTML Form - Company</h2>
+
+            <form action="#" method="post"></form>
+                <fieldset>
+                    <legend>Customer Information</legend>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name" size="30">
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Phone number should be in the format: 123-456-7890">
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+                    <label for="pet-preference">Your Pet Type Preference:</label>
+                    <select id="pet-preference" name="pet_preference" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="fish">Fish</option>
+                        <option value="lizard">Lizard</option>
+                        <option value="hamster">Hamster</option>
+                        <option value="guinea_pig">Guinea Pig</option>
+                        <option value="rat">Rat</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Service Preferences</legend>
+
+                    <label for="newsletter">Subscribe to our newsletter:</label>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+
+                    <p>Would you like a free consultation?</p>
+                    <label><input type="radio" name="consultation" value="yes" required> Yes</label>
+                    <label><input type="radio" name="consultation" value="no"> No</label>
+                </fieldset>
+
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </form>
+
+        </main>
+
+
+        <!-- CONSISTENT FOOTER -->
+        <div data-include="components/footer.html"></div>
+
+        <!-- SCRIPT FOR CONSISTENT CONTENT -->
+        <script src="scripts/include.js"></script>
+
+    </body>
+
+</html>
