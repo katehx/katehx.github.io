@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const table = document.getElementById("complexTable");
+    const table = document.getElementById("complex-table");
     const rows = table.getElementsByTagName("tr");
     let totalYears = 0;
 
@@ -12,5 +12,5 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    document.getElementById("totalYears").textContent = totalYears;
+    document.getElementById("total-years").textContent = totalYears;
 });
