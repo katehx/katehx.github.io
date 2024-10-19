@@ -1,10 +1,32 @@
-body{
-    background-color: #F7F2CB;
+:root {
+    --white: #F3F6F0;
+    --pale-yellow: #F7F2CB;
+    --magenta: #CA2E55;
+    --orange: #F79256;
+    --grey: #2F2F2F;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     margin: 0;
 }
 
-header, footer{
-    background: linear-gradient(90deg, #CA2E55, #F79256);    
+body {
+    background-color: var(--pale-yellow);
+    flex: 1;
+}
+
+main {
+    box-sizing: border-box;
+    margin: 2vh 10% 2vh 10%;
+    flex: 1 0 auto;
+}
+
+header,
+footer {
+    background: linear-gradient(90deg, var(--magenta), var(--orange));
 }
 
 header {
@@ -18,73 +40,40 @@ header {
 }
 
 h1 {
-    color: #F3F6F0;
+    color: var(--white);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 25px; 
+    font-size: 25px;
 }
 
 h2 {
-    color: #2F2F2F;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 25px; 
-}
-
-h3 {
-    color: #F3F6F0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 25px; 
-}
-
-main {
-    box-sizing: border-box;
-    border: solid #000 1px; 
-    margin: 2vh 10% 2vh 10%;
-}
-
-/* page title */
-p.header {
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 70px;
-    color: #F3F6F0;
-    background-image: url("../images/trees.png");
-    background-position: center; 
-    background-repeat: no-repeat; 
+    font-size: 45px;
+    color: var(--white);
+    background-image: url("../images/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    height: 150px;
+    min-height: 150px;
     margin-top: 0;
     margin-bottom: 0;
 }
 
-/* end header */
-/*
-main {
-    /* box-sizing: border-box;
-    border: solid #000 1px; 
-    display: flex;
-    margin: 5% 20% 5% 20%;
-}
-
-h2 {
-    color: #1C433D;
+h3 {
+    color: var(--magenta);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 40px;
+    font-size: 30px;
 }
 
-p, ul, li, ol, figcaption { 
-    color: #F3F6F0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 25px;
-}
-
+p,
+ul,
+li,
+ol,
 figcaption {
-    color: #1C433D;
-}
-
-nav {
-    color: #F3F6F0;
+    color: var(--grey);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 25px;
 }
 
@@ -92,80 +81,97 @@ a {
     text-decoration: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 25px;
-    color: #e1e48c;
-}
-*/
-p.footer {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #F3F6F0;
+    color: var(--magenta);
 }
 
-footer{
+nav > a  {
+    color: var(--pale-yellow);
+}
+
+nav > a:not(:last-child)::after {
+    content: " ⚡︎ ";
+    color: var(--grey);
+}
+
+footer > p > a {
+    color: var(--pale-yellow); 
+}
+
+footer > p > a:hover, nav > a:hover {
+    color: var(--grey);
+}
+
+footer > p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--white);
+}
+
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 20px 5px 20px;
+    flex-shrink: 0;
 }
 
-img{
-    border: #1C433D solid 5px;
-    border-radius: 5px;
-}
-
-/* https://www.w3schools.com/howto/howto_css_dropdown.asp */
-
-
-/* Dropdown Button */
-.dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
+}
+
+.drop-button {
+    background-color: var(--magenta);
+    color: transparent;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: var(--white);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
+    padding: 16px;
+    right: 0;
+}
+
+.dropdown-content a {
+    color: var(--grey);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+    font-size: 14px;
+}
 
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
 
-  /* table styling */
-  table {
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #F79256;
+    color: white;
+}
+
+.dropdown .drop-button svg {
+    width: 25px;
+    height: 25px;
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
 }
 
 th {
-    background-color: #5b6081;
+    background-color: var(--magenta);
     color: white;
     border: 1px solid #000;
     padding: 8px;
