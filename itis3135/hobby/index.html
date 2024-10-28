@@ -29,13 +29,13 @@
         <header>
             <h1>Stamp Collecting</h1>
             <nav>
-                <a onclick="showPage('what-home')">What</a> &#9650;
-                <a onclick="showPage('who')">Who</a> &#9660;
-                <a onclick="showPage('when')">When</a> &#9650;
-                <a onclick="showPage('where')">Where</a> &#9660;
-                <a onclick="showPage('how')">How</a> &#9650;
-                <a onclick="showPage('why')">Why</a> &#9660;
-                <a onclick="showPage('ai')">AI</a>
+                <a id="link-what">What</a> &#9650;
+                <a id="link-who">Who</a> &#9660;
+                <a id="link-when">When</a> &#9650;
+                <a id="link-where">Where</a> &#9660;
+                <a id="link-how">How</a> &#9650;
+                <a id="link-why">Why</a> &#9660;
+                <a id="link-ai">AI</a>
               </nav>
         </header>
 
@@ -278,6 +278,35 @@
                 document.querySelectorAll('section').forEach((section) => section.classList.remove('visible'));
                 document.getElementById(sectionId).classList.add('visible');
             };
+    
+            // event listeners for each navigation link
+            document.getElementById('link-what').addEventListener('click', (e) => {
+                showPage('what-home');
+            });
+    
+            document.getElementById('link-who').addEventListener('click', (e) => {
+                showPage('who');
+            });
+    
+            document.getElementById('link-when').addEventListener('click', (e) => {
+                showPage('when');
+            });
+    
+            document.getElementById('link-where').addEventListener('click', (e) => {
+                showPage('where');
+            });
+    
+            document.getElementById('link-how').addEventListener('click', (e) => {
+                showPage('how');
+            });
+    
+            document.getElementById('link-why').addEventListener('click', (e) => {
+                showPage('why');
+            });
+    
+            document.getElementById('link-ai').addEventListener('click', (e) => {
+                showPage('ai');
+            });
         </script>
 
     </body>
