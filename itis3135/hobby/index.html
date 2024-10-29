@@ -1,314 +1,510 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Hobby | Stamp Collecting</title>
-        <!-- Accumulus script -->
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-        <!-- Styling for site -->
-        <style>
-            section {
-                /* default sections to not be visible */
-                display: none;
-            }
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Hobby | Stamp Collecting</title>
+            <!-- Accumulus script -->
+            <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+            <!-- Styling for site -->
+            <style>
+                :root{
+                    --purple: #331F2D;
+                    --tan: #DDC399;
+                    --white: #fcf9e1;
+                    --blue: #012a37;
+                    --red: #E63946;
+                }
 
-            .visible {
-                display: block;
-            }
+                section {
+                    /* default sections to not be visible */
+                    display: none;
+                }
 
-            a {
-                cursor: pointer;
-            }
-        </style>
-    </head>
+                .visible {
+                    display: block;
+                }
 
-    <body>
+                header, footer {
+                    background-color: var(--purple);
+                    color: var(--tan);
+                    text-align: center;
+                    padding: 20px 0;
+                }
 
-        <header>
-            <h1>Stamp Collecting</h1>
-            <nav>
-                <a id="link-what">What</a> &#9650;
-                <a id="link-who">Who</a> &#9660;
-                <a id="link-when">When</a> &#9650;
-                <a id="link-where">Where</a> &#9660;
-                <a id="link-how">How</a> &#9650;
-                <a id="link-why">Why</a> &#9660;
-                <a id="link-ai">AI</a>
-              </nav>
-        </header>
+                header h1, footer p {
+                    margin: 0;
+                    letter-spacing: 2px;
+                }
 
-        <main>
-            
-            <section id="what-home" class="visible">
-                <h2>What</h2>
-                <figure>
-                    <img src="./images/what.png" alt="Display of stamp collection with various tools such as: tweezers, magnifying glass, and storage box">
-                    <figcaption>Stamp collection spread featuring the tools essensial for every stamp collector</figcaption>
-                    <p><em>AI Prompt: Generate an image for the cover of an article titled "what stamp collecting" - do not include the given text</em></p>
-                </figure>
-                <h3>What is stamp collecting?</h3>
-                <p>Stamp collecting, also known as philately, is a popular hobby enjoyed by people of all ages around the world. It involves gathering and organizing postage stamps from various countries, time periods, and themes, allowing collectors to explore history, culture, and art in a hands-on way. Each stamp tells a story, capturing important moments, famous figures, landscapes, animals, and even scientific achievements. For many, stamp collecting is not just about amassing items, but about building a personal collection that reflects their interests and curiosities.</p>
-                <p>The appeal of stamp collecting lies in its flexibility. Some collectors focus on stamps from a particular country, historical period, or theme, while others enjoy finding rare or unique stamps. For instance, stamps from early postal services, limited-edition designs, or stamps with printing errors are highly sought after. Stamp collecting also fosters a sense of community; collectors often join clubs, visit exhibitions, and participate in auctions, sharing their passion with others who appreciate the craft.</p>
-                <p>Additionally, stamp collecting can be a relaxing and educational pastime. Handling, categorizing, and learning about stamps provides an opportunity to unwind and discover more about the world. Each new addition to a collection can open up new areas of knowledge, from geography and politics to art and science. Whether pursued casually or with a goal of building a highly specialized collection, stamp collecting is a timeless hobby that connects people with both history and each other.</p>
-            </section>
+                footer p {
+                    font-size: 14px;
+                    background-color: var(--purple);
+                    color: var(--tan);
+                }
 
-            <section id="who">
-                <h2>Who</h2>
-                <figure>
-                    <img src="./images/who.png" alt="Grid of stamps with magnifying glass showcasing a stamp with a man">
-                    <figcaption>Stamp collecting is fit for anyone! Can you find yourself a stamp that looks like you?</figcaption>
-                    <p><em>AI Prompt: Generate an image for the cover of an article titled "who stamp collecting" - do not include the given text</em></p>
-                </figure>
-                <h3>Who stamp collects?</h3>
-                <p>Stamp collecting is a hobby that welcomes people of all ages and backgrounds from around the globe. From young children captivated by the colors and designs on stamps to seasoned collectors drawn to rare, historical pieces, anyone can enjoy building a collection. The beauty of stamp collecting lies in its accessibility; there are no age limits, special skills, or specific locations needed to start. People from diverse cultures and regions share a common passion for collecting, preserving, and learning from these miniature works of art. Stamp collecting communities flourish worldwide, with collectors often exchanging stamps across borders, learning about different cultures, and creating lasting connections. Whether pursued casually or with focused dedication, stamp collecting offers something meaningful for everyone.</p>
-                <form action="#" method="post">
-                    <label for="age">Age:</label>
-                    <input type="number" id="age" name="age" min="1" max="120" required>
-            
-                    <label for="country">Country:</label>
-                    <input type="text" id="country" name="country" required>
-            
-                    <label for="years">How long have you been stamp collecting?</label>
-                    <select id="years" name="years" required>
-                        <option value="" disabled selected>Select range</option>
-                        <option value="Less than 1 year">Less than 1 year</option>
-                        <option value="1-3 years">1-3 years</option>
-                        <option value="4-5 years">4-5 years</option>
-                        <option value="5-10 years">5-10 years</option>
-                        <option value="10-15 years">10-15 years</option>
-                        <option value="15-20 years">15-20 years</option>
-                        <option value="More than 20 years">More than 20 years</option>
-                    </select>
-            
-                    <label for="motivation">Why did you get into stamp collecting?</label>
-                    <textarea id="motivation" name="motivation" rows="4" placeholder="What inspired you to start collecting?"></textarea>
-            
-                    <label for="stamps">How many stamps do you currently have?</label>
-                    <input type="number" id="stamps" name="stamps" min="0">
-            
-                    <label>What themes do you focus on in your collection?</label>
-                    <div class="checkbox-group">
-                        <label><input type="checkbox" name="themes" value="Historical Figures"> Historical Figures</label>
-                        <label><input type="checkbox" name="themes" value="Nature and Wildlife"> Nature and Wildlife</label>
-                        <label><input type="checkbox" name="themes" value="Landmarks and Monuments"> Landmarks and Monuments</label>
-                        <label><input type="checkbox" name="themes" value="Art and Culture"> Art and Culture</label>
-                        <label><input type="checkbox" name="themes" value="Transportation"> Transportation</label>
-                        <label><input type="checkbox" name="themes" value="Space Exploration"> Space Exploration</label>
-                        <label><input type="checkbox" name="themes" value="Other"> Other</label>
-                    </div>
-            
-                    <button type="submit">Submit</button>
-                    <button type="reset">Clear</button>
-                </form>
-            </section>
+                footer a {
+                    color: var(--white);
+                }
 
-            <section id="when">
-                <h2>When</h2>
-                <figure>
-                    <img src="./images/when.png" alt="Background of stamps with a stopwatch and chess piece on top">
-                    <figcaption>Stamp collectors range from a casual or committed level of time involvement just as other hobbies do</figcaption>
-                    <p><em>AI Prompt: Generate an image for the cover of an article titled "stamp collecting when" - do not include the given text</em></p>
-                </figure>
-                <h3>When did stamp collecting start?</h3>
-                <p>Stamp collecting began as a hobby in the mid-19th century, shortly after the world's first postage stamp, the Penny Black, was issued by the United Kingdom in 1840. As the idea of prepaid postage spread worldwide, people quickly recognized the unique beauty and historical value of stamps, and collecting them became popular. By the 1860s, philately (the study of stamps and postal history) had developed as a formal hobby, with enthusiasts exchanging and preserving stamps from different countries and time periods. Stamp clubs and exhibitions soon followed, allowing collectors to share their passion and knowledge.</p>
-                <h3>How much time does it take to stamp collect?</h3>
-                <p>Today, the time commitment to stamp collecting can vary widely, depending on individual interest and goals. New collectors may start with just a few hours a week, browsing online marketplaces, visiting local stamp shops, or researching stamps that catch their eye. As they grow more passionate, collectors may dedicate more time to sorting, cataloging, and expanding their collections. Some enthusiasts spend several hours each week, or even daily, carefully curating their albums, hunting for rare pieces, and connecting with other collectors around the world. Whether approached casually or with dedication, stamp collecting remains a rewarding hobby that invites as much time and attention as each collector chooses to give.</p>
-            </section>
+                nav {
+                    color: var(--tan);
+                    font-size: 20px;;
+                }
 
-            <section id="where">
-                <h2>Where</h2>
-                <figure>
-                    <img src="./images/where.png" alt="Map of the globe stylized with stamps on the continents and around the map">
-                    <figcaption>Stamps exist all across the globe and can reflect previous time periods</figcaption>
-                    <p><em>AI Prompt: Generate an image for the cover of an article titled "where stamp collecting" - do not include the given text &amp; remove the "where stamp collecting" text from the image</em></p>
-                </figure>
-                <h3>Stamp collecting across the globe</h3>
-                <p>Stamp collecting is a globally cherished hobby because it offers a unique way to explore the world's cultures, histories, and artistic expressions. Every country issues its own stamps, each featuring distinctive designs that celebrate local landscapes, famous individuals, important events, wildlife, and cultural icons. As a result, collectors can journey across borders and eras through their collections, gaining insight into global diversity and heritage. Furthermore, stamp collecting builds an international community, as collectors often trade stamps, attend international exhibitions, and share knowledge across languages and cultures. This blend of personal discovery and global connection makes stamp collecting a rich and rewarding pursuit worldwide.</p>
-                <table>
-                    <tr>
-                        <th>Country</th>
-                        <th>First Stamp Issued</th>
-                        <th>Notable Information</th>
-                    </tr>
-                    <tr>
-                        <td>United Kingdom</td>
-                        <td>1840</td>
-                        <td>Issued the first postage stamp, the "Penny Black," featuring Queen Victoria. British stamps are unique for not including the country's name.</td>
-                    </tr>
-                    <tr>
-                        <td>United States</td>
-                        <td>1847</td>
-                        <td>First stamps featured Benjamin Franklin and George Washington. The "Inverted Jenny" is a rare and famous stamp.</td>
-                    </tr>
-                    <tr>
-                        <td>Germany</td>
-                        <td>1900</td>
-                        <td>Issued the first commemorative stamp. Stamps from the 1920s inflation period with high denominations are highly collectible.</td>
-                    </tr>
-                    <tr>
-                        <td>Japan</td>
-                        <td>1871</td>
-                        <td>First stamp featured a dragon. Known for high-quality stamps often depicting cultural symbols like cherry blossoms.</td>
-                    </tr>
-                    <tr>
-                        <td>Canada</td>
-                        <td>1851</td>
-                        <td>Issued the "Three-Pence Beaver," one of the earliest wildlife-themed stamps, and known for nature and wildlife designs.</td>
-                    </tr>
-                    <tr>
-                        <td>China</td>
-                        <td>1878</td>
-                        <td>Highly collectible stamps from the Cultural Revolution era. The "Red Monkey" stamp from 1980 is famous for its rarity.</td>
-                    </tr>
-                    <tr>
-                        <td>France</td>
-                        <td>1849</td>
-                        <td>Issued the "Ceres" series, known for the "Marianne" series symbolizing liberty and national pride.</td>
-                    </tr>
-                    <tr>
-                        <td>Australia</td>
-                        <td>1913</td>
-                        <td>First stamp featured a kangaroo and map. Australian stamps often depict native animals and Indigenous art.</td>
-                    </tr>
-                    <tr>
-                        <td>Russia</td>
-                        <td>1857</td>
-                        <td>Issued the "10-kopeck imperforate" featuring the double-headed eagle. Known for Soviet-era stamps depicting national achievements.</td>
-                    </tr>
-                    <tr>
-                        <td>India</td>
-                        <td>1852</td>
-                        <td>Issued the "Scinde Dawk," the world's first regional stamp. Known for stamps showcasing cultural diversity and historic landmarks.</td>
-                    </tr>
-                </table>
-            </section>
+                nav > a {
+                    color: var(--white);
+                    font-size: 25px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                }
+                
+                body{
+                    margin: 0;
+                    background-color: var(--tan);
+                }
 
-            <section id="how">
-                <h2>How</h2>
-                <figure>
-                    <img src="./images/how.png" alt="Pile of stamps">
-                    <figcaption>Starting a new hobby can be overwhelming, how do you start collecting stamps?</figcaption>
-                    <p><em>AI Prompt: Generate an image for the cover of an article titled "how stamp collecting" - do not include the given text &amp; fill the image with content instead of half being empty</em></p>
-                </figure>
-                <h3>How to start stamp collecting?</h3>
-                <p>Starting a stamp collection can be a fun and rewarding journey, offering both a window into history and a creative way to explore the world. To begin, you don't need any specialized knowledge or expensive equipment—just a bit of curiosity and a few basic tools like an album or binder for organizing, tweezers for handling stamps carefully, and a magnifying glass to appreciate the intricate designs up close. Beginners might start by collecting general themes, such as stamps from a favorite country, stamps featuring animals or historical figures, or simply by gathering interesting stamps as they come across them.</p>
-                <h3>Where to find stamps?</h3>
-                <p>When it comes to finding stamps, there are several avenues to explore. Many new collectors start with everyday stamps from letters or packages they receive. Friends and family can also be great sources, often happy to pass along stamps from their mail or travels. Local stamp shops, flea markets, and antique stores are also excellent places to find unique and affordable stamps. For those looking to expand their collection further, online marketplaces and auction sites offer a vast selection of stamps from around the world. Additionally, many collectors join stamp clubs or attend stamp shows where they can trade and purchase stamps, often discovering rare or unique items that would be hard to find elsewhere. Starting a stamp collection is about gradually building a collection that feels meaningful and enjoyable, exploring the world one stamp at a time.</p>
-            </section>
+                main{
+                    padding: 10px 20%;
+                }
 
-            <section id="why">
-                <h2>Why</h2>
-                <figure>
-                    <img src="./images/why.png" alt="Display of stamps, circular and rectangular stamps, some stamps including people and animals">
-                    <figcaption>Stamps can be viewed as little pieces of art, each with a story to tell. What stories will your stamp collection tell?</figcaption>
-                    <p><em>AI Prompt: Generate an image for the cover of an article titled "why stamp collecting" - do not include the given text</em></p>
-                </figure>
-                <h3>Why should I start stamp collecting?</h3>
-                <p>Stamp collecting is more than just a hobby; it's a journey through history, culture, and art that offers a unique sense of fulfillment. By getting involved in stamp collecting, people open themselves up to a world of learning opportunities and meaningful connections. Each stamp tells a story—whether it's a glimpse into a significant historical event, a tribute to a renowned figure, or an artistic representation of a country
-                    s natural beauty. Through collecting, enthusiasts can explore these stories firsthand, deepening their knowledge of geography, politics, wildlife, and art, all while building a collection that reflects their personal interests.</p>
-                <p>Beyond its educational value, stamp collecting provides numerous personal benefits. It encourages patience, attention to detail, and organizational skills as collectors research, sort, and display their stamps. For many, it becomes a relaxing activity, offering a welcome escape from the hustle of daily life. The community aspect is also rewarding; collectors can join clubs, attend exhibitions, and participate in trading or online forums, where they connect with like-minded individuals from all walks of life and corners of the world. Whether pursued as a lifelong passion or a casual interest, stamp collecting offers enrichment, connection, and joy to those who take part.</p>
-                <h3>Fun facts about stamp collecting</h3>
-                <ul>
-                    <li>The first postage stamp in the world was the "Penny Black," issued by the United Kingdom in 1840, featuring a portrait of Queen Victoria.</li>
-                    <li>Philately is the official term for the study and collection of postage stamps and related items.</li>
-                    <li>Stamp collecting is one of the most popular hobbies in the world, with millions of collectors from every continent.</li>
-                    <li>Stamps are often released to commemorate significant events, famous people, wildlife, and cultural heritage, making each collection unique.</li>
-                    <li>The "Inverted Jenny," a U.S. stamp from 1918 with an upside-down airplane, is one of the rarest and most valuable stamps, worth over a million dollars.</li>
-                    <li>Stamps from the 1920s and 1930s issued in Germany have some of the highest denominations due to extreme inflation during that time.</li>
-                    <li>Some collectors focus on specific themes, such as animals, space exploration, or historical figures, making themed collections popular and highly personalized.</li>
-                    <li>There are "forever stamps" in the U.S. that remain valid for first-class postage, regardless of future postal rate increases.</li>
-                    <li>China's "Red Monkey" stamp, issued in 1980, is highly sought after due to its rarity and association with Chinese zodiac themes.</li>
-                    <li>Many famous people, including Franklin D. Roosevelt, Freddie Mercury, and John Lennon, were avid stamp collectors.</li>
-                </ul>
-            </section>
+                h1, h2, h3 {
+                    font-family:Cambria, Cochin, Georgia, serif;
+                }
 
-            <section id="ai">
-                <h2>AI</h2>
-                <figure>
-                    <img src="./images/ai.png" alt="Grid of AI generated stamps">
-                    <figcaption>AI generated pictures may look unusual at times</figcaption>
-                    <p><em>AI Prompt: Generate an image for the cover of an article titled "AI stamp collecting" - do not include the given text &amp; make the image look off-putting and obvious it is AI generated</em></p>
-                </figure>
-                    <h3>Photos</h3>
+                h1{
+                    color: var(--tan);
+                    font-size: 40px;
+                }
+
+                h2 {
+                    text-align: center;
+                    font-size: 100px;
+                    margin: 40px 10px;
+                    color: var(--blue);
+                }
+
+                h3 {
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: var(--purple);
+                    margin: 0;
+                }
+
+                p, li, form label, form input, form select, form textarea, form button, table td {
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    color: var(--blue);
+                    font-size: 20px;
+                }
+
+                a {
+                    cursor: pointer;
+                    text-decoration: none;
+                }
+
+                figcaption{
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-weight: bold;
+                    color: var(--purple);
+                    text-align: center;
+                    margin-top: 10px;
+                    font-size: 18px;
+                }
+
+                img {
+                    border: 10px solid var(--blue);
+                    border-radius: 8px;
+                    max-width: 80%;
+                    height: auto;
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                li {
+                    list-style-type: square;
+                }
+
+                hr {
+                    border: none;
+                    height: 4px;
+                    background-color: #E63946;
+                    border-radius: 5px;
+                    margin: 20px auto;
+                }
+
+                form {
+                    max-width: 600px;
+                    margin: 20px auto;
+                    padding: 20px;
+                    background-color: #fbf8e6;
+                    border-radius: 10px;
+                }
+
+                form label {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: var(--purple);
+                    display: block;
+                    margin-bottom: 5px;
+                }
+
+                form input[type="number"],
+                form input[type="text"],
+                form select,
+                form textarea {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 16px;
+                    border: 2px solid var(--purple);
+                    border-radius: 5px;
+                    margin-bottom: 15px;
+                    box-sizing: border-box;
+                    background-color: var(--white);
+                }
+
+                form textarea {
+                    resize: vertical;
+                    height: 100px;
+                }
+
+
+                form button[type="submit"],
+                form button[type="reset"] {
+                    background-color: var(--purple);
+                    color: var(--tan);
+                    border: none;
+                    padding: 10px 20px;
+                    font-size: 18px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    margin-right: 10px;
+                    transition: background-color 0.3s;
+                }
+
+                hr {
+                    border: none;
+                    height: 3px;
+                    background-color: var(--red);
+                    border-radius: 5px;
+                    margin: 30px auto;
+                    width: 80%;
+                }
+
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin: 20px 0;
+                    background-color: #fbf8e6; 
+                    font-size: 18px;
+                }
+
+                table th {
+                    background-color: var(--purple);
+                    color: var(--tan); 
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    padding: 12px;
+                    text-align: left;
+                    font-family: Cambria, Cochin, Georgia, serif;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+
+                table td {
+                    padding: 10px;
+                    color: var(--blue);
+                    border-bottom: 1px solid var(--red); 
+                }
+
+
+            </style>
+        </head>
+
+        <body>
+
+            <header>
+                <h1>Stamp Collecting</h1>
+                <nav>
+                    <a id="link-what">What</a> &#9650;
+                    <a id="link-who">Who</a> &#9660;
+                    <a id="link-when">When</a> &#9650;
+                    <a id="link-where">Where</a> &#9660;
+                    <a id="link-how">How</a> &#9650;
+                    <a id="link-why">Why</a> &#9660;
+                    <a id="link-ai">AI</a>
+                </nav>
+            </header>
+
+            <main>
+                
+                <section id="what-home" class="visible">
+                    <h2>What</h2>
+                    <figure>
+                        <img src="./images/what.png" alt="Display of stamp collection with various tools such as: tweezers, magnifying glass, and storage box">
+                        <figcaption>Stamp collection spread featuring the tools essensial for every stamp collector</figcaption>
+                        <p><em>AI Prompt: Generate an image for the cover of an article titled "what stamp collecting" - do not include the given text</em></p>
+                    </figure>
+                    <h3>What is stamp collecting?</h3>
+                    <p>Stamp collecting, also known as philately, is a popular hobby enjoyed by people of all ages around the world. It involves gathering and organizing postage stamps from various countries, time periods, and themes, allowing collectors to explore history, culture, and art in a hands-on way. Each stamp tells a story, capturing important moments, famous figures, landscapes, animals, and even scientific achievements. For many, stamp collecting is not just about amassing items, but about building a personal collection that reflects their interests and curiosities.</p>
+                    <p>The appeal of stamp collecting lies in its flexibility. Some collectors focus on stamps from a particular country, historical period, or theme, while others enjoy finding rare or unique stamps. For instance, stamps from early postal services, limited-edition designs, or stamps with printing errors are highly sought after. Stamp collecting also fosters a sense of community; collectors often join clubs, visit exhibitions, and participate in auctions, sharing their passion with others who appreciate the craft.</p>
+                    <p>Additionally, stamp collecting can be a relaxing and educational pastime. Handling, categorizing, and learning about stamps provides an opportunity to unwind and discover more about the world. Each new addition to a collection can open up new areas of knowledge, from geography and politics to art and science. Whether pursued casually or with a goal of building a highly specialized collection, stamp collecting is a timeless hobby that connects people with both history and each other.</p>
+                </section>
+
+                <section id="who">
+                    <h2>Who</h2>
+                    <figure>
+                        <img src="./images/who.png" alt="Grid of stamps with magnifying glass showcasing a stamp with a man">
+                        <figcaption>Stamp collecting is fit for anyone! Can you find yourself a stamp that looks like you?</figcaption>
+                        <p><em>AI Prompt: Generate an image for the cover of an article titled "who stamp collecting" - do not include the given text</em></p>
+                    </figure>
+                    <h3>Who stamp collects?</h3>
+                    <p>Stamp collecting is a hobby that welcomes people of all ages and backgrounds from around the globe. From young children captivated by the colors and designs on stamps to seasoned collectors drawn to rare, historical pieces, anyone can enjoy building a collection. The beauty of stamp collecting lies in its accessibility; there are no age limits, special skills, or specific locations needed to start. People from diverse cultures and regions share a common passion for collecting, preserving, and learning from these miniature works of art. Stamp collecting communities flourish worldwide, with collectors often exchanging stamps across borders, learning about different cultures, and creating lasting connections. Whether pursued casually or with focused dedication, stamp collecting offers something meaningful for everyone.</p>
+                    <hr>
+                    <form action="#" method="post">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="1" max="120" required>
+                
+                        <label for="country">Country:</label>
+                        <input type="text" id="country" name="country" required>
+                
+                        <label for="years">How long have you been stamp collecting?</label>
+                        <select id="years" name="years" required>
+                            <option value="" disabled selected>Select range</option>
+                            <option value="Less than 1 year">Less than 1 year</option>
+                            <option value="1-3 years">1-3 years</option>
+                            <option value="4-5 years">4-5 years</option>
+                            <option value="5-10 years">5-10 years</option>
+                            <option value="10-15 years">10-15 years</option>
+                            <option value="15-20 years">15-20 years</option>
+                            <option value="More than 20 years">More than 20 years</option>
+                        </select>
+                
+                        <label for="motivation">Why did you get into stamp collecting?</label>
+                        <textarea id="motivation" name="motivation" rows="4" placeholder="What inspired you to start collecting?"></textarea>
+                
+                        <label for="stamps">How many stamps do you currently have?</label>
+                        <input type="number" id="stamps" name="stamps" min="0">
+                
+                        <label>What themes do you focus on in your collection?</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="themes" value="Historical Figures"> Historical Figures</label>
+                            <label><input type="checkbox" name="themes" value="Nature and Wildlife"> Nature and Wildlife</label>
+                            <label><input type="checkbox" name="themes" value="Landmarks and Monuments"> Landmarks and Monuments</label>
+                            <label><input type="checkbox" name="themes" value="Art and Culture"> Art and Culture</label>
+                            <label><input type="checkbox" name="themes" value="Transportation"> Transportation</label>
+                            <label><input type="checkbox" name="themes" value="Space Exploration"> Space Exploration</label>
+                            <label><input type="checkbox" name="themes" value="Other"> Other</label>
+                        </div>
+                
+                        <button type="submit">Submit</button>
+                        <button type="reset">Clear</button>
+                    </form>
+                </section>
+
+                <section id="when">
+                    <h2>When</h2>
+                    <figure>
+                        <img src="./images/when.png" alt="Background of stamps with a stopwatch and chess piece on top">
+                        <figcaption>Stamp collectors range from a casual or committed level of time involvement just as other hobbies do</figcaption>
+                        <p><em>AI Prompt: Generate an image for the cover of an article titled "stamp collecting when" - do not include the given text</em></p>
+                    </figure>
+                    <h3>When did stamp collecting start?</h3>
+                    <p>Stamp collecting began as a hobby in the mid-19th century, shortly after the world's first postage stamp, the Penny Black, was issued by the United Kingdom in 1840. As the idea of prepaid postage spread worldwide, people quickly recognized the unique beauty and historical value of stamps, and collecting them became popular. By the 1860s, philately (the study of stamps and postal history) had developed as a formal hobby, with enthusiasts exchanging and preserving stamps from different countries and time periods. Stamp clubs and exhibitions soon followed, allowing collectors to share their passion and knowledge.</p>
+                    <h3>How much time does it take to stamp collect?</h3>
+                    <p>Today, the time commitment to stamp collecting can vary widely, depending on individual interest and goals. New collectors may start with just a few hours a week, browsing online marketplaces, visiting local stamp shops, or researching stamps that catch their eye. As they grow more passionate, collectors may dedicate more time to sorting, cataloging, and expanding their collections. Some enthusiasts spend several hours each week, or even daily, carefully curating their albums, hunting for rare pieces, and connecting with other collectors around the world. Whether approached casually or with dedication, stamp collecting remains a rewarding hobby that invites as much time and attention as each collector chooses to give.</p>
+                </section>
+
+                <section id="where">
+                    <h2>Where</h2>
+                    <figure>
+                        <img src="./images/where.png" alt="Map of the globe stylized with stamps on the continents and around the map">
+                        <figcaption>Stamps exist all across the globe and can reflect previous time periods</figcaption>
+                        <p><em>AI Prompt: Generate an image for the cover of an article titled "where stamp collecting" - do not include the given text &amp; remove the "where stamp collecting" text from the image</em></p>
+                    </figure>
+                    <h3>Stamp collecting across the globe</h3>
+                    <p>Stamp collecting is a globally cherished hobby because it offers a unique way to explore the world's cultures, histories, and artistic expressions. Every country issues its own stamps, each featuring distinctive designs that celebrate local landscapes, famous individuals, important events, wildlife, and cultural icons. As a result, collectors can journey across borders and eras through their collections, gaining insight into global diversity and heritage. Furthermore, stamp collecting builds an international community, as collectors often trade stamps, attend international exhibitions, and share knowledge across languages and cultures. This blend of personal discovery and global connection makes stamp collecting a rich and rewarding pursuit worldwide.</p>
+                    <table>
+                        <tr>
+                            <th>Country</th>
+                            <th>First Stamp Issued</th>
+                            <th>Notable Information</th>
+                        </tr>
+                        <tr>
+                            <td>United Kingdom</td>
+                            <td>1840</td>
+                            <td>Issued the first postage stamp, the "Penny Black," featuring Queen Victoria. British stamps are unique for not including the country's name.</td>
+                        </tr>
+                        <tr>
+                            <td>United States</td>
+                            <td>1847</td>
+                            <td>First stamps featured Benjamin Franklin and George Washington. The "Inverted Jenny" is a rare and famous stamp.</td>
+                        </tr>
+                        <tr>
+                            <td>Germany</td>
+                            <td>1900</td>
+                            <td>Issued the first commemorative stamp. Stamps from the 1920s inflation period with high denominations are highly collectible.</td>
+                        </tr>
+                        <tr>
+                            <td>Japan</td>
+                            <td>1871</td>
+                            <td>First stamp featured a dragon. Known for high-quality stamps often depicting cultural symbols like cherry blossoms.</td>
+                        </tr>
+                        <tr>
+                            <td>Canada</td>
+                            <td>1851</td>
+                            <td>Issued the "Three-Pence Beaver," one of the earliest wildlife-themed stamps, and known for nature and wildlife designs.</td>
+                        </tr>
+                        <tr>
+                            <td>China</td>
+                            <td>1878</td>
+                            <td>Highly collectible stamps from the Cultural Revolution era. The "Red Monkey" stamp from 1980 is famous for its rarity.</td>
+                        </tr>
+                        <tr>
+                            <td>France</td>
+                            <td>1849</td>
+                            <td>Issued the "Ceres" series, known for the "Marianne" series symbolizing liberty and national pride.</td>
+                        </tr>
+                        <tr>
+                            <td>Australia</td>
+                            <td>1913</td>
+                            <td>First stamp featured a kangaroo and map. Australian stamps often depict native animals and Indigenous art.</td>
+                        </tr>
+                        <tr>
+                            <td>Russia</td>
+                            <td>1857</td>
+                            <td>Issued the "10-kopeck imperforate" featuring the double-headed eagle. Known for Soviet-era stamps depicting national achievements.</td>
+                        </tr>
+                        <tr>
+                            <td>India</td>
+                            <td>1852</td>
+                            <td>Issued the "Scinde Dawk," the world's first regional stamp. Known for stamps showcasing cultural diversity and historic landmarks.</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section id="how">
+                    <h2>How</h2>
+                    <figure>
+                        <img src="./images/how.png" alt="Pile of stamps">
+                        <figcaption>Starting a new hobby can be overwhelming, how do you start collecting stamps?</figcaption>
+                        <p><em>AI Prompt: Generate an image for the cover of an article titled "how stamp collecting" - do not include the given text &amp; fill the image with content instead of half being empty</em></p>
+                    </figure>
+                    <h3>How to start stamp collecting?</h3>
+                    <p>Starting a stamp collection can be a fun and rewarding journey, offering both a window into history and a creative way to explore the world. To begin, you don't need any specialized knowledge or expensive equipment—just a bit of curiosity and a few basic tools like an album or binder for organizing, tweezers for handling stamps carefully, and a magnifying glass to appreciate the intricate designs up close. Beginners might start by collecting general themes, such as stamps from a favorite country, stamps featuring animals or historical figures, or simply by gathering interesting stamps as they come across them.</p>
+                    <h3>Where to find stamps?</h3>
+                    <p>When it comes to finding stamps, there are several avenues to explore. Many new collectors start with everyday stamps from letters or packages they receive. Friends and family can also be great sources, often happy to pass along stamps from their mail or travels. Local stamp shops, flea markets, and antique stores are also excellent places to find unique and affordable stamps. For those looking to expand their collection further, online marketplaces and auction sites offer a vast selection of stamps from around the world. Additionally, many collectors join stamp clubs or attend stamp shows where they can trade and purchase stamps, often discovering rare or unique items that would be hard to find elsewhere. Starting a stamp collection is about gradually building a collection that feels meaningful and enjoyable, exploring the world one stamp at a time.</p>
+                </section>
+
+                <section id="why">
+                    <h2>Why</h2>
+                    <figure>
+                        <img src="./images/why.png" alt="Display of stamps, circular and rectangular stamps, some stamps including people and animals">
+                        <figcaption>Stamps can be viewed as little pieces of art, each with a story to tell. What stories will your stamp collection tell?</figcaption>
+                        <p><em>AI Prompt: Generate an image for the cover of an article titled "why stamp collecting" - do not include the given text</em></p>
+                    </figure>
+                    <h3>Why should I start stamp collecting?</h3>
+                    <p>Stamp collecting is more than just a hobby; it's a journey through history, culture, and art that offers a unique sense of fulfillment. By getting involved in stamp collecting, people open themselves up to a world of learning opportunities and meaningful connections. Each stamp tells a story—whether it's a glimpse into a significant historical event, a tribute to a renowned figure, or an artistic representation of a country
+                        s natural beauty. Through collecting, enthusiasts can explore these stories firsthand, deepening their knowledge of geography, politics, wildlife, and art, all while building a collection that reflects their personal interests.</p>
+                    <p>Beyond its educational value, stamp collecting provides numerous personal benefits. It encourages patience, attention to detail, and organizational skills as collectors research, sort, and display their stamps. For many, it becomes a relaxing activity, offering a welcome escape from the hustle of daily life. The community aspect is also rewarding; collectors can join clubs, attend exhibitions, and participate in trading or online forums, where they connect with like-minded individuals from all walks of life and corners of the world. Whether pursued as a lifelong passion or a casual interest, stamp collecting offers enrichment, connection, and joy to those who take part.</p>
+                    <h3>Fun facts about stamp collecting</h3>
                     <ul>
-                        <li>All AI prompts for photo generation are listed under the respective images.</li>
+                        <li>The first postage stamp in the world was the "Penny Black," issued by the United Kingdom in 1840, featuring a portrait of Queen Victoria.</li>
+                        <li>Philately is the official term for the study and collection of postage stamps and related items.</li>
+                        <li>Stamp collecting is one of the most popular hobbies in the world, with millions of collectors from every continent.</li>
+                        <li>Stamps are often released to commemorate significant events, famous people, wildlife, and cultural heritage, making each collection unique.</li>
+                        <li>The "Inverted Jenny," a U.S. stamp from 1918 with an upside-down airplane, is one of the rarest and most valuable stamps, worth over a million dollars.</li>
+                        <li>Stamps from the 1920s and 1930s issued in Germany have some of the highest denominations due to extreme inflation during that time.</li>
+                        <li>Some collectors focus on specific themes, such as animals, space exploration, or historical figures, making themed collections popular and highly personalized.</li>
+                        <li>There are "forever stamps" in the U.S. that remain valid for first-class postage, regardless of future postal rate increases.</li>
+                        <li>China's "Red Monkey" stamp, issued in 1980, is highly sought after due to its rarity and association with Chinese zodiac themes.</li>
+                        <li>Many famous people, including Franklin D. Roosevelt, Freddie Mercury, and John Lennon, were avid stamp collectors.</li>
                     </ul>
-                    <h3>Figcaptions and Alt Text for Images</h3>
-                    <ul>
-                        <li>No AI, wrote this information manually</li>
-                    </ul>
-                    <h3>What Info Prompt</h3>
-                    <ul>
-                        <li>Informational text explaining what stamp collecting is as a hobby</li>
-                    </ul>
-                    <h3>Who Info Prompt</h3>
-                    <ul>
-                        <li>Generate a paragraph about who can participate in stamp collecting and how it is for all ages and people all over the globe</li>
-                    </ul>
-                    <h3>When Info Prompt</h3>
-                    <ul>
-                        <li>Generate text about when stamp collecting begun as a hobby and the time commitment people may put into stamp collecting as they start the hobby today</li>
-                    </ul>
-                    <h3>Where Info Prompt</h3>
-                    <ul>
-                        <li>Generate one paragraph about why stamp collecting is a hobby internationally</li>
-                        <li>Information for 10 countries about their first stamp and notable information about stamps in the country</li>
-                    </ul>
-                    <h3>How Info Prompt</h3>
-                    <ul>
-                        <li>Generate text on how to start stamp collecting and where to look for stamps</li>
-                    </ul>
-                    <h3>Why Info Prompt</h3>
-                    <ul>
-                        <li>Generate text explaining why people should get involved in stamp collecting and the benefits of the hobby</li>
-                        <li>Generate a list of fun facts about stamp collecting</li>
-                    </ul>
-            </section>
+                </section>
 
-        </main>
+                <section id="ai">
+                    <h2>AI</h2>
+                    <figure>
+                        <img src="./images/ai.png" alt="Grid of AI generated stamps">
+                        <figcaption>AI generated pictures may look unusual at times</figcaption>
+                        <p><em>AI Prompt: Generate an image for the cover of an article titled "AI stamp collecting" - do not include the given text &amp; make the image look off-putting and obvious it is AI generated</em></p>
+                    </figure>
+                        <h3>Photos</h3>
+                        <ul>
+                            <li>All AI prompts for photo generation are listed under the respective images.</li>
+                        </ul>
+                        <h3>Figcaptions and Alt Text for Images</h3>
+                        <ul>
+                            <li>No AI, wrote this information manually</li>
+                        </ul>
+                        <h3>What Info Prompt</h3>
+                        <ul>
+                            <li>Informational text explaining what stamp collecting is as a hobby</li>
+                        </ul>
+                        <h3>Who Info Prompt</h3>
+                        <ul>
+                            <li>Generate a paragraph about who can participate in stamp collecting and how it is for all ages and people all over the globe</li>
+                        </ul>
+                        <h3>When Info Prompt</h3>
+                        <ul>
+                            <li>Generate text about when stamp collecting begun as a hobby and the time commitment people may put into stamp collecting as they start the hobby today</li>
+                        </ul>
+                        <h3>Where Info Prompt</h3>
+                        <ul>
+                            <li>Generate one paragraph about why stamp collecting is a hobby internationally</li>
+                            <li>Information for 10 countries about their first stamp and notable information about stamps in the country</li>
+                        </ul>
+                        <h3>How Info Prompt</h3>
+                        <ul>
+                            <li>Generate text on how to start stamp collecting and where to look for stamps</li>
+                        </ul>
+                        <h3>Why Info Prompt</h3>
+                        <ul>
+                            <li>Generate text explaining why people should get involved in stamp collecting and the benefits of the hobby</li>
+                            <li>Generate a list of fun facts about stamp collecting</li>
+                        </ul>
+                </section>
 
-        <footer>
-            <p>&copy; 2024 Designed by <a href="../hicksconsulting.group/">Hicks Consulting Group</a></p>
-        </footer>
+            </main>
 
-        <script>
-            const showPage = (sectionId) => {
-                document.querySelectorAll('section').forEach((section) => section.classList.remove('visible'));
-                document.getElementById(sectionId).classList.add('visible');
-            };
-    
-            // event listeners for each navigation link
-            document.getElementById('link-what').addEventListener('click', (e) => {
-                showPage('what-home');
-            });
-    
-            document.getElementById('link-who').addEventListener('click', (e) => {
-                showPage('who');
-            });
-    
-            document.getElementById('link-when').addEventListener('click', (e) => {
-                showPage('when');
-            });
-    
-            document.getElementById('link-where').addEventListener('click', (e) => {
-                showPage('where');
-            });
-    
-            document.getElementById('link-how').addEventListener('click', (e) => {
-                showPage('how');
-            });
-    
-            document.getElementById('link-why').addEventListener('click', (e) => {
-                showPage('why');
-            });
-    
-            document.getElementById('link-ai').addEventListener('click', (e) => {
-                showPage('ai');
-            });
-        </script>
+            <footer>
+                <p>&copy; 2024 Designed by <a href="../hicksconsulting.group/">Hicks Consulting Group</a></p>
+            </footer>
 
-    </body>
+            <script>
+                const showPage = (sectionId) => {
+                    document.querySelectorAll('section').forEach((section) => section.classList.remove('visible'));
+                    document.getElementById(sectionId).classList.add('visible');
+                };
+        
+                // event listeners for each navigation link
+                document.getElementById('link-what').addEventListener('click', (e) => {
+                    showPage('what-home');
+                });
+        
+                document.getElementById('link-who').addEventListener('click', (e) => {
+                    showPage('who');
+                });
+        
+                document.getElementById('link-when').addEventListener('click', (e) => {
+                    showPage('when');
+                });
+        
+                document.getElementById('link-where').addEventListener('click', (e) => {
+                    showPage('where');
+                });
+        
+                document.getElementById('link-how').addEventListener('click', (e) => {
+                    showPage('how');
+                });
+        
+                document.getElementById('link-why').addEventListener('click', (e) => {
+                    showPage('why');
+                });
+        
+                document.getElementById('link-ai').addEventListener('click', (e) => {
+                    showPage('ai');
+                });
+            </script>
 
-</html>
+        </body>
+
+    </html>
