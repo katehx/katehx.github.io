@@ -1,17 +1,110 @@
-<h1>CONTACT</h1>
-
-<form
-  action="https://formspree.io/f/mpwzlarp"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Excalibur Tees</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <form action="https://formspree.io/f/mpwzlarp" method="POST">
+      <!-- Name -->
+      <label for="name">Your Name *</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      
+      <!-- Email -->
+      <label for="email">Your Email *</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      
+      <!-- Phone Number -->
+      <label for="phone">Your Phone Number (Optional)</label>
+      <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+      
+      <!-- Type of Item -->
+      <label for="itemType">What type of item are you interested in? *</label>
+      <select id="itemType" name="itemType" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="tshirt">T-shirt</option>
+        <option value="sweatshirt">Sweatshirt</option>
+        <option value="hat">Hat</option>
+        <option value="other">Other</option>
+      </select>
+      
+      <!-- Quantity -->
+      <label for="quantity">How many items are you looking to buy? *</label>
+      <input type="number" id="quantity" name="quantity" placeholder="Enter the quantity" min="1" required>
+      
+      <!-- Design Assistance -->
+      <label for="design">Do you need help creating a design? *</label>
+      <select id="design" name="design" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="yes">Yes, I need help with the design</option>
+        <option value="no">No, I have a design ready</option>
+      </select>
+      
+      <!-- Preferred Colors -->
+      <label for="colors">Preferred Colors (Optional)</label>
+      <input type="text" id="colors" name="colors" placeholder="e.g., Blue, White, Red">
+      
+      <!-- Deadline -->
+      <label for="deadline">When do you need the order completed by? (Optional)</label>
+      <input type="date" id="deadline" name="deadline">
+      
+      <!-- Additional Information -->
+      <label for="message">Anything else we should know?</label>
+      <textarea id="message" name="message" rows="5" placeholder="Add any additional details here"></textarea>
+      
+      <!-- Upload File -->
+      <label for="file">Upload your design or logo (Optional)</label>
+      <input type="file" id="file" name="file" accept="image/*">
+      
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
