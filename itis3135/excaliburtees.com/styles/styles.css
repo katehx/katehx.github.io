@@ -1,6 +1,64 @@
-* {
-    box-sizing: border-box;
+:root {
+    --cobalt: #133C55;
+    /* https://coolors.co/133c55-386fa4-59a5d8-84d2f6-91e5f6 */
 }
+
+main {
+    background-color: greenyellow;
+}
+
+/* Header Styling */
+
+header {
+    background-color: var(--cobalt);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 10px 15px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: auto;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    height: 80px;
+    align-content: center;
+}
+
+nav ul li a:hover {
+    color: var(--cobalt);
+    background-color: white;
+}
+
+/* Header Styling End */
 
 body {
     margin: 0;

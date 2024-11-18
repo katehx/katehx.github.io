@@ -14,6 +14,9 @@
         <div data-include="components/header.html"></div>
 
         <main>
+
+            <!-- <img src="images/horizontal.svg" alt="Excalibur Tees Logo"> -->
+
             <div class="slideshow-container">
                 <div class="mySlides fade">
                     <img src="images/1.jpg" alt="Image 1" class="slide-image">
@@ -38,6 +41,13 @@
 
         <!-- SLIDESHOW -->
         <script src="scripts/slideshow.js"></script>
+
+        <script>
+            document.querySelector('.hamburger').addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.toggle('active');
+            });
+        </script>
+
 
     </body>
 
