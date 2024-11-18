@@ -1,10 +1,7 @@
 :root {
     --cobalt: #133C55;
+    --white : white;
     /* https://coolors.co/133c55-386fa4-59a5d8-84d2f6-91e5f6 */
-}
-
-main {
-    background-color: greenyellow;
 }
 
 /* Header Styling */
@@ -43,7 +40,7 @@ nav ul {
 
 nav ul li a {
     display: block;
-    color: white;
+    color: var(--white);
     text-align: center;
     text-decoration: none;
     padding: 0 16px;
@@ -55,10 +52,39 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--cobalt);
-    background-color: white;
+    background-color: var(--white);
 }
 
 /* Header Styling End */
+
+/* Footer Styling */
+
+footer {
+    background-color: var(--cobalt);     
+    color: var(--white); 
+    text-align: center; 
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%; 
+}
+
+.footer-logo {
+    width: 30px; 
+    height: auto; 
+    margin-bottom: 8px; 
+}
+
+footer p {
+    margin: 0;     
+    font-size: 14px; 
+}
+
+/* Footer Styling End */
+
+main {
+    background-color: var(--white);
+}
+
 
 body {
     margin: 0;
