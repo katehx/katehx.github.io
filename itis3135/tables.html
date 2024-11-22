@@ -91,101 +91,94 @@
             </table>
 
             <figure>
-
                 <h3>Employee Data in Complex Table</h3>
                 <table id="complex-table">
                     <tr>
-                        <th>Rank</th>
-                        <th>Full Name</th>
-                        <th>Employee Email</th>
-                        <th>Years of Service</th>
-                        <th>Salary</th>
+                        <th id="rank">Rank</th>
+                        <th id="name">Full Name</th>
+                        <th id="email">Employee Email</th>
+                        <th id="years">Years of Service</th>
+                        <th id="salary">Salary</th>
                     </tr>
                     <tr>
-                        <th rowspan="2">Chief</th>
-                        <td>Speckles Flufftail</td>
-                        <td>speckles.fluf@rodent.org</td>
-                        <td>5</td>
-                        <td>$125,000</td>
+                        <th id="chief" rowspan="2">Chief</th>
+                        <td headers="rank name">Speckles Flufftail</td>
+                        <td headers="rank email">speckles.fluf@rodent.org</td>
+                        <td headers="rank years">5</td>
+                        <td headers="rank salary">$125,000</td>
                     </tr>
                     <tr>
-                        <td>Leonard Paws</td>
-                        <td>leonard.paws@rodent.org</td>
-                        <td>7</td>
-                        <td>$135,000</td>
+                        <td headers="rank name">Leonard Paws</td>
+                        <td headers="rank email">leonard.paws@rodent.org</td>
+                        <td headers="rank years">7</td>
+                        <td headers="rank salary">$135,000</td>
                     </tr>
                     <tr>
-                        <th rowspan="3">Senior</th>
-                        <td>Kip Nibble</td>
-                        <td>kip.nibb@rodent.org</td>
-                        <td>2</td>
-                        <td>$96,000</td>
+                        <th id="senior" rowspan="3">Senior</th>
+                        <td headers="rank name">Kip Nibble</td>
+                        <td headers="rank email">kip.nibb@rodent.org</td>
+                        <td headers="rank years">2</td>
+                        <td headers="rank salary">$96,000</td>
                     </tr>
                     <tr>
-                        <td>Darwin Whisker</td>
-                        <td>darwin.whis@rodent.org</td>
-                        <td>1</td>
-                        <td>$95,000</td>
+                        <td headers="rank name">Darwin Whisker</td>
+                        <td headers="rank email">darwin.whis@rodent.org</td>
+                        <td headers="rank years">1</td>
+                        <td headers="rank salary">$95,000</td>
                     </tr>
                     <tr>
-                        <td>Bucky Seedmunch</td>
-                        <td>bucky.seed@rodent.org</td>
-                        <td>4</td>
-                        <td>$101,000</td>
+                        <td headers="rank name">Bucky Seedmunch</td>
+                        <td headers="rank email">bucky.seed@rodent.org</td>
+                        <td headers="rank years">4</td>
+                        <td headers="rank salary">$101,000</td>
                     </tr>
                     <tr>
-                        <th rowspan="5">Junior</th>
-                        <td>Hurley Tinyfoot</td>
-                        <td>hurley.tiny@rodent.org</td>
-                        <td>5</td>
-                        <td>$78,000</td>
+                        <th id="junior" rowspan="5">Junior</th>
+                        <td headers="rank name">Hurley Tinyfoot</td>
+                        <td headers="rank email">hurley.tiny@rodent.org</td>
+                        <td headers="rank years">5</td>
+                        <td headers="rank salary">$78,000</td>
                     </tr>
                     <tr>
-                        <td>Mooch Furryface</td>
-                        <td>mooch.furr@rodent.org</td>
-                        <td>5</td>
-                        <td>$82,000</td>
+                        <td headers="rank name">Mooch Furryface</td>
+                        <td headers="rank email">mooch.furr@rodent.org</td>
+                        <td headers="rank years">5</td>
+                        <td headers="rank salary">$82,000</td>
                     </tr>
                     <tr>
-                        <td>Whiskers Nibbles</td>
-                        <td>whiskers.nibb@rodent.org</td>
-                        <td>8</td>
-                        <td>$88,000</td>
+                        <td headers="rank name">Whiskers Nibbles</td>
+                        <td headers="rank email">whiskers.nibb@rodent.org</td>
+                        <td headers="rank years">8</td>
+                        <td headers="rank salary">$88,000</td>
                     </tr>
                     <tr>
-                        <td>Gizmo Ball</td>
-                        <td>gizmo.ball@rodent.org</td>
-                        <td>1</td>
-                        <td>$75,000</td>
+                        <td headers="rank name">Gizmo Ball</td>
+                        <td headers="rank email">gizmo.ball@rodent.org</td>
+                        <td headers="rank years">1</td>
+                        <td headers="rank salary">$75,000</td>
                     </tr>
                     <tr>
-                        <td>Snickers Smoosh</td>
-                        <td>snickers.smoo@rodent.org</td>
-                        <td>3</td>
-                        <td>$84,000</td>
+                        <td headers="rank name">Snickers Smoosh</td>
+                        <td headers="rank email">snickers.smoo@rodent.org</td>
+                        <td headers="rank years">3</td>
+                        <td headers="rank salary">$84,000</td>
                     </tr>
                     <tr>
                         <td colspan="3">The total years of service from all employees:</td>
                         <td id="total-years">41</td>
                         <td></td>
-
                     </tr>
                 </table>
                 <figcaption>Current employee status and company contact up to date as of 18 October 2024.</figcaption>
             </figure>
-                
 
         </main>
-
 
         <!-- CONSISTENT FOOTER -->
         <div data-include="components/footer.html"></div>
 
         <!-- SCRIPT FOR CONSISTENT CONTENT -->
         <script src="scripts/include.js"></script>
-        
-        <!-- SCRIPT FOR MATH -->
-        <script src="scripts/math.js"></script>
 
     </body>
 

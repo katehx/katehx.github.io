@@ -20,8 +20,24 @@ body {
 
 main {
     box-sizing: border-box;
-    margin: 2vh 10% 2vh 10%;
+    margin: 0 auto;
     flex: 1 0 auto;
+    max-width: 1200px;
+    width: 90%;
+}
+
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    main {
+        width: 95%;
+        max-width: 800px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        width: 100%;
+        padding: 10px;
+    }
 }
 
 header,
@@ -72,7 +88,9 @@ p,
 ul,
 li,
 ol,
-figcaption {
+figcaption,
+label,
+legend {
     color: var(--grey);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 25px;
