@@ -16,7 +16,55 @@
         <div data-include="components/header.html" data-replace="%page_name%:BYO Introduction"></div>
 
         <main>
-
+            <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+    
+            <form id="BYO-intro">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Kate Hicks" required><br>
+    
+                <label for="mascot">Mascot:</label>
+                <input type="text" id="mascot" name="mascot" placeholder="Kinetic Hamster" required><br>
+    
+                <label for="image">Image:</label>
+                <input type="file" id="image" name="image" accept="image/png, image/jpeg" required><br>
+    
+                <label for="caption">Image Caption:</label>
+                <input type="text" id="caption" name="caption" placeholder="Picture of me at the park"><br>
+    
+                <label for="personalBackground">Personal Background:</label>
+                <textarea id="personalBackground" name="personalBackground" placeholder="From NC!" required></textarea><br>
+    
+                <label for="professionalBackground">Professional Background:</label>
+                <textarea id="professionalBackground" name="professionalBackground" placeholder="IT Professional" required></textarea><br>
+    
+                <label for="academicBackground">Academic Background:</label>
+                <textarea id="academicBackground" name="academicBackground" placeholder="Computer Science Major" required></textarea><br>
+    
+                <label for="webDevBackground">Background in Web Development:</label>
+                <textarea id="webDevBackground" name="webDevBackground" placeholder="I have made 100 websites" required></textarea><br>
+    
+                <label for="computerPlatform">Primary Computer Platform:</label>
+                <input type="text" id="computerPlatform" name="computerPlatform" placeholder="Windows" required><br>
+    
+                <label>Courses currently taking:</label>
+                <div id="courses">
+                    <button type="button" id="addCourse">Add Course</button>
+                </div><br>
+    
+                <label for="funnyThing">Funny thing?</label>
+                <textarea id="funnyThing" name="funnyThing" placeholder="lol"></textarea><br>
+    
+                <label for="anythingElse">Anything else?</label>
+                <textarea id="anythingElse" name="anythingElse" placeholder="The sky is blue"></textarea><br>
+    
+                <label>
+                    <input type="checkbox" id="agree" required>
+                    I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.
+                </label><br>
+    
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
            
         </main>
 
@@ -26,7 +74,7 @@
         <!-- SCRIPT FOR CONSISTENT CONTENT -->
         <script src="scripts/include.js"></script>
 
-        <script src="scripts/defaultscripts.js"></script>
+        <script src="scripts/survey.js"></script>
 
     </body>
 

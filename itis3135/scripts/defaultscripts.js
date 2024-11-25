@@ -1,13 +1,17 @@
 function currentTime() {
     const current = new Date();
-    const time = current.getHours();
-    const minutes = current.getMinutes();
-    const weekday = current.getDay();
+    const hours = current.getHours();
+    const minutes = current.getMinutes().toString().padStart(2, '0');
+    const weekdayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const weekday = weekdayNames[current.getDay()];
     const day = current.getDate();
-    const month = current.getMonth();
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const month = monthNames[current.getMonth()];
     const year = current.getFullYear();
-    document.getElementsByTagName('h3').innerText = `Today is ${time} on ${weekday}, ${day} ${month}, ${year}`;
+    document.querySelector('h3').innerText = `Today is ${hours}:${minutes} on ${weekday}, ${day} ${month}, ${year}`;
 }
+window.onload = currentTime;
+
 
 // Call the function on page load
 currentTime();
@@ -22,11 +26,13 @@ function processUserInfo() {
 
 // Process polygon information
 function processPolygonInfo() {
-    const number = Math.abs(Math.round(document.getElementById('favoriteNumber').value));
+    const inputNumber = document.getElementById('favoriteNumber').value;
+    const roundedNumber = Math.abs(Math.round(inputNumber));
     const polygonNames = ['Zero-gon', 'Monogon', 'Digon', 'Triangle', 'Quadrilateral', 'Pentagon', 'Hexagon', 'Heptagon', 'Octagon', 'Nonagon', 'Decagon'];
-    const name = polygonNames[number] || 'Unknown polygon';
-    alert(name);
+    const polygonName = polygonNames[roundedNumber] || 'Unknown polygon';
+    alert(`The polygon with ${roundedNumber} sides is called: ${polygonName}`);
 }
+
 
 // Example brand-specific functions
 function randomHamsterFact() {
@@ -48,3 +54,4 @@ function suggestHamsterDiet() {
 function planHamsterAdventure() {
     alert("Your hamster is ready for a fun tunnel maze adventure!");
 }
+
