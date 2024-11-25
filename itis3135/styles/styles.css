@@ -43,6 +43,7 @@ main {
 header,
 footer {
     background: linear-gradient(90deg, var(--magenta), var(--orange));
+    z-index: 999;
 }
 
 header {
@@ -279,7 +280,7 @@ tr:nth-child(odd) {
   /* Six columns side by side */
   .column {
     float: left;
-    width: 16.66%;
+    width: 11.11111%;
   }
   
   /* Add a transparency effect for thumnbail images */
@@ -290,4 +291,16 @@ tr:nth-child(odd) {
   .active,
   .demo:hover {
     opacity: 1;
+  }
+
+  .demo, .cursor {
+    width: 100%;
+  }
+
+  .mySlides {
+    width: 100px;
+  }
+
+  .mySlides > img{
+    width: 1200%;
   }

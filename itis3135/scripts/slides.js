@@ -1,12 +1,10 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
@@ -28,3 +26,10 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
+
+document.querySelector(".prev").addEventListener("click", () => plusSlides(-1));
+document.querySelector(".next").addEventListener("click", () => plusSlides(1));
+
+document.querySelectorAll(".demo").forEach((thumbnail, index) => {
+  thumbnail.addEventListener("click", () => currentSlide(index + 1));
+});

@@ -17,7 +17,39 @@
 
         <main>
 
-           
+            <!-- Display current time, date, and day -->
+            <h3></h3>
+
+            <!-- Form for user input -->
+            <form id="userInfoForm">
+                <label for="userName">What is your name?</label>
+                <input type="text" id="userName" placeholder="Enter your name" required>
+
+                <label for="userMood">How are you feeling?</label>
+                <input type="text" id="userMood" placeholder="Enter your mood" required>
+
+                <button type="button" onclick="processUserInfo()">Submit</button>
+            </form>
+
+            <!-- Greeting output -->
+            <p id="greetingMessage"></p>
+
+            <!-- Polygon form -->
+            <form id="polygonForm">
+                <label for="favoriteNumber">Enter your favorite number (0-10):</label>
+                <input type="number" id="favoriteNumber" min="0" max="10" step="any" required>
+
+                <button type="button" onclick="processPolygonInfo()">Find Polygon</button>
+            </form>
+
+            <!-- Action buttons for brand-specific functions -->
+            <div id="brandActions">
+                <button onclick="randomHamsterFact()">Random Hamster Fact</button>
+                <button onclick="calculateHamsterRunSpeed()">Calculate Hamster Speed</button>
+                <button onclick="generateHamsterName()">Generate Hamster Name</button>
+                <button onclick="suggestHamsterDiet()">Suggest Hamster Diet</button>
+                <button onclick="planHamsterAdventure()">Plan Hamster Adventure</button>
+            </div>
         </main>
 
         <!-- CONSISTENT FOOTER -->
