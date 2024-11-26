@@ -223,7 +223,7 @@ tr:nth-child(odd) {
   }
   
   /* Hide the images by default */
-  .mySlides {
+  .my-slides {
     display: none;
   }
   
@@ -303,10 +303,10 @@ tr:nth-child(odd) {
     width: 100%;
   }
 
-  .mySlides {
+  .my-slides {
     width: 100px;
   }
 
-  .mySlides > img{
+  .my-slides > img{
     width: 1200%;
   }
