@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("BYO-intro");
-    const addCourseButton = document.getElementById("addCourse");
+    const form = document.getElementById("byo-intro");
+    const addCourseButton = document.getElementById("add-course");
     const coursesDiv = document.getElementById("courses");
 
     addCourseButton.addEventListener("click", () => {
