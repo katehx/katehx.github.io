@@ -82,8 +82,13 @@ footer > p {
 
 main {
     background-color: var(--white);
-    flex: 1;
     padding-top: 75px;
+    flex: 1;
+}
+
+p, h1, h2, h3, figure, ul, .row {
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 
@@ -106,7 +111,7 @@ html, body {
 /* Slideshow container */
 .slideshow-container {
     width: 100%; /* Full width */
-    height: 450px; /* Desired height for the slideshow */
+    height: 400px; /* Desired height for the slideshow */
     position: relative;
     margin: 0 auto;
     overflow: hidden; /* Ensures cropped parts of the image are hidden */
@@ -115,24 +120,38 @@ html, body {
 
 .slides img {
     width: 100%; /* Ensure full width */
-    height: 100%; /* Ensures the image fills the height of the container */
+    height: 400px; /* Ensures the image fills the height of the container */
     object-fit: cover; /* Crop the image to fill the container while maintaining aspect ratio */
-    object-position: center 90%; /* Adjust vertical alignment to focus on kids */
 }
 
+.slides:nth-child(1) > img {
+    object-position: center 65%; /* Adjust based on focus for the first image */
+}
+
+.slides:nth-child(2) > img {
+    object-position: center 67%; /* Adjust based on focus for the second image */
+}
+
+.slides:nth-child(3) > img {
+    object-position: center 72%; /* Adjust based on focus for the third image */
+}
 
 /* Dots */
+/* Adjust the dots container position */
 .slideshow-container .dots {
-    text-align: center;
-    margin-top: 10px;
+    position: absolute; /* Position it relative to the slideshow container */
+    bottom: 20px; /* Adjust the spacing from the bottom */
+    width: 100%; /* Center the dots horizontally */
+    text-align: center; /* Align the dots in the center */
 }
 
+/* Style the dots */
 .dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
     margin: 0 5px;
-    background-color: #bbb;
+    background-color: white;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -141,6 +160,7 @@ html, body {
 .dot.active {
     background-color: #717171;
 }
+
 
 /* Navigation buttons */
 .prev, .next {
@@ -169,104 +189,18 @@ html, body {
 
 /* slide end */
 
-/* accordion */
-
-.accordion {
-    max-width: 600px;
-    margin: 50px auto;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto;
 }
 
-.accordion h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.accordion-item {
-    margin-bottom: 10px;
+th, td {
     border: 1px solid #ddd;
-    border-radius: 4px;
-    overflow: hidden;
+    padding: 8px;
+    text-align: center;
 }
 
-.accordion-header {
-    width: 100%;
-    padding: 15px;
-    text-align: left;
-    background: #007bff;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 16px;
+th {
+    background-color: #f4f4f4;
 }
-
-.accordion-header:hover {
-    background: #0056b3;
-}
-
-.accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    background: #f9f9f9;
-    padding: 0 15px;
-    transition: max-height 0.3s ease-out;
-    border-top: 1px solid #ddd;
-}
-
-.accordion-content p {
-    margin: 15px 0;
-}
-
-/* accordian end */
-
-/* carousel */
-
-.carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.carousel-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 30%;
-}
-
-.carousel-images img {
-    width: 100%;
-    flex-shrink: 0;
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-.carousel-button.prev {
-    left: 10px;
-}
-
-.carousel-button.next {
-    right: 10px;
-}
-
-.carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* carousel end*/
