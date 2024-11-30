@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/styles.css"> 
-        <title>Excalibur Tees | Home</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Excalibur Tees | Home</title>
+</head>
 
-    <body>
+<body>
 
-        <!-- HEADER -->
-        <div data-include="components/header.html"></div>
+    <div data-include="components/header.html"></div>
 
-        <main>
+    <main>
+        <div class="slideshow-container">
+            <div class="slides fade">
+                <img src="images/1.jpg" alt="Robotics teams with shirts with brain icon">
+            </div>
 
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="images/1.jpg" alt="Image 1" class="slide-image">
-                </div>
-                <div class="mySlides fade">
-                    <img src="images/2.jpg" alt="Image 2" class="slide-image">
-                </div>
-                <div class="mySlides fade">
-                    <img src="images/roboduckies.jpg" alt="Image 3" class="slide-image">
-                </div>
-            </div>            
-            
-            <h1>EXCALIBUR TEES</h1>
-            <p>At Excalibur Tees, we specialize in creating custom T-shirts that bring K-12 school programs to life. Whether it's for school spirit, team pride, or special events, our high-quality designs and printing services make every occasion unforgettable.</p>
+            <div class="slides fade">
+                <img src="images/2.jpg" alt="Robotics teams with shirts with train icon">
+            </div>
 
-            <p>Get a Free Quote!</p>
+            <div class="slides fade">
+                <img src="images/roboduckies.jpg" alt="Robotics teams with shirts with idk icon">
+            </div>
 
-            
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
 
-        </main>
+            <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
 
-        <!-- FOOTER -->
-        <div data-include="components/footer.html"></div>
+        <h1>EXCALIBUR TEES</h1>
+        <p>At Excalibur Tees, we specialize in creating custom T-shirts that bring K-12 school programs to life. Whether it's for school spirit, team pride, or special events, our high-quality designs and printing services make every occasion unforgettable.</p>
+        <p>Get a Free Quote!</p>
+    </main>
 
-        <!-- CONSISTENT CONTENT -->
-        <script src="scripts/include.js"></script>
+    <div data-include="components/footer.html"></div>
 
-        <!-- SLIDESHOW -->
-        <script src="scripts/slideshow.js"></script>
+    <script src="scripts/include.js"></script>
+    <script src="scripts/slideshow.js"></script>
 
-    </body>
+</body>
 
 </html>
