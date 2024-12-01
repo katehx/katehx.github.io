@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Excalibur Tees | Contact</title>
+    <!-- Accumulus script -->
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Contact Us</h2>
+        <p>Questions about our products, company, potential orders, or sponsorships? This is the place!</p>
+        <p>Already know what you want to order? Check out our <a href="quote.html">quote page</a> to get an estimate on your project.</p>
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="c3c67a80-68df-4292-802a-46df28400cdd">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            
+            <button type="submit">Submit</button>
+          </form>
+          
+        <p>Our team will review your contact form and get back to you with a response within 5 business days.</p>
+          
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/include.js"></script>
+
+</body>
+
+</html>

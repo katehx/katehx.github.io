@@ -3,17 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const previewImg = document.getElementById('preview-img');
 
     fileInput.addEventListener('change', function (event) {
-        const file = event.target.files[0]; // Get the uploaded file
+        const file = event.target.files[0];
 
         if (file) {
             const reader = new FileReader();
             reader.onload = function (e) {
-                previewImg.src = e.target.result; // Set the preview image source
-                previewImg.style.display = 'block'; // Make the image visible
+                previewImg.src = e.target.result;
+                previewImg.style.display = 'block';
             };
-            reader.readAsDataURL(file); // Read the file as a data URL
+            reader.readAsDataURL(file);
         } else {
-            previewImg.style.display = 'none'; // Hide the image if no file is selected
+            previewImg.style.display = 'none';
         }
     });
 });

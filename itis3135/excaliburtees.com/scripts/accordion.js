@@ -1,15 +1,17 @@
-document.querySelectorAll(".accordion-header").forEach(button => {
-    button.addEventListener("click", () => {
-        const content = button.nextElementSibling;
+document.addEventListener("DOMContentLoaded", function () {
+    const acc = document.getElementsByClassName("accordion");
 
-        // Toggle active state for the clicked button
-        button.classList.toggle("active");
+    for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
 
-        // Open or close the accordion content
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-        } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
-    });
+            const panel = this.nextElementSibling;
+
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
 });

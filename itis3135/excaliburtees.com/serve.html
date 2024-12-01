@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/styles.css"> 
         <title>Excalibur Tees | Who We Serve</title>
+        <!-- Accumulus script -->
+        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -14,49 +16,53 @@
 
         <main>
             <h2>Who We Serve</h2>
-            
-            <h3>K-12</h3> 
+            <p>At Excalibur Tees, we put our customers first because we believe every group has a story worth sharing. Whether you're part of a club, a sports team, or planning a special event, we are here to help bring your vision to life with custom T-shirts and apparel that make an impact. We pride ourselves on delivering quality products, exceptional service, and designs that capture the unique spirit of your community. Let us help you celebrate your achievements and build lasting memories together!</p>
 
-            
-                <h2>Schools and Classrooms</h2>
-                <p>
-                    From spirit days to end-of-year celebrations, we work with teachers and administrators to create T-shirts that foster unity and school pride. Let us help you design something your students will treasure!
-                </p>
-            
-                <h2>Clubs and Extracurricular Activities</h2>
-                <p>
-                    Whether it’s a robotics team, drama club, or student council, we’ve got your group covered. Custom T-shirts are a great way to showcase your club’s achievements and build camaraderie.
-                </p>
-            
-                <h2>Sports Teams</h2>
-                <p>
-                    Gear up for the season with custom T-shirts for your team or fan base. From practice shirts to game-day apparel, we’ll help you stand out on and off the field.
-                </p>
-            
-                <h2>Special Events</h2>
-                <p>
-                    Field trips, fundraisers, graduations, and more—special events deserve special apparel. Our T-shirts are the perfect way to make your event memorable and cohesive.
-                </p>
-            
-                <h2>Community and Parent Groups</h2>
-                <p>
-                    We also work with PTAs, PTOs, and parent volunteers to create T-shirts that bring families together and support school events. Show your support for your school in style!
-                </p>
-            
-                <h2>Why Choose Us?</h2>
-                <p>
-                    Excalibur Tees is dedicated to meeting the unique needs of K-12 educational programs. We understand the importance of affordability, durability, and fast turnaround times. When you choose us, you’re choosing a partner who values your goals and works hard to exceed your expectations.
-                </p>
+            <button class="accordion">Schools and Classrooms</button>
+            <div class="panel">
+                <p>From spirit days to end-of-year celebrations, we work with teachers and administrators to create T-shirts that foster unity and school pride. Let us help you design something your students will treasure!</p>
+                <img src="images/school.jpg" alt="Spirit day">
+            </div>
+
+            <button class="accordion">Clubs and Extracurricular Activities</button>
+            <div class="panel">
+                <p>Whether it's a robotics team, drama club, or student council, we've got your group covered. Custom T-shirts are a great way to showcase your club's achievements and build camaraderie.</p>
+                <img src="images/roboduckies.jpg" alt="Robotics team">
+            </div>
+
+            <button class="accordion">Sports Teams</button>
+            <div class="panel">
+                <p>Gear up for the season with custom T-shirts for your team or fan base. From practice shirts to game-day apparel, we'll help you stand out on and off the field.</p>
+                <img src="images/soccer.jpg" alt="Soccer team">
+            </div>
+    
+            <button class="accordion">Special Events</button>
+            <div class="panel">
+                <p>Field trips, fundraisers, graduations, and more—special events deserve special apparel. Our T-shirts are the perfect way to make your event memorable and cohesive.</p>
+                <img src="images/event.jpg" alt="Fundraiser shirts">
+
+            </div>
+
+            <button class="accordion">Community and Parent Groups</button>
+            <div class="panel">
+                <p>We also work with PTAs, PTOs, and parent volunteers to create T-shirts that bring families together and support school events. Show your support for your school in style!</p>
+                <img src="images/parent.jpg" alt="PTA shirts">
+
+            </div>
         
-        
+            <h3>Why Choose Us?</h3>
+            <p>Excalibur Tees is dedicated to meeting the unique needs of K-12 educational programs. We understand the importance of affordability, durability, and fast turnaround times. When you choose us, you're choosing a partner who values your goals and works hard to exceed your expectations.</p>
+
             <h3>Let's Get Started!</h3>
-            <p>Ready to join the schools, teams, and groups we proudly serve? Visit our <a href="products.html">Products</a> page to see what we offer, or head to the <a href="contact.html">Contact Us</a> page to start planning your custom T-shirts today!</p>
+            <p>Ready to join the schools, teams, and groups we proudly serve? Visit our <a href="products.html">Products</a> page to see what we offer, or head to the <a href="quote.html">Quote</a> page to start planning your custom T-shirts today!</p>
 
         </main>
 
         <div data-include="components/footer.html"></div>
 
         <script src="scripts/include.js"></script>
+
+        <script src="scripts/accordion.js"></script>
 
     </body>
 
