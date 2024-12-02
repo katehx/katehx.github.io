@@ -1,6 +1,10 @@
 :root {
     --cobalt: #133C55;
-    --white : rgb(250, 248, 253);
+    --white:rgb(250, 248, 253);
+    --grey:   ;
+    --red: #d9706f;
+    --black: #022020;
+    --alt: e5e1f8;
     /* https://coolors.co/133c55-386fa4-59a5d8-84d2f6-91e5f6 */
 }
 
@@ -20,7 +24,7 @@ header {
     display: flex;
     align-items: center;
     height: 60px;
-    padding: 10px 15px;
+    margin: 10px 15px;
 }
 
 header > nav {
@@ -84,7 +88,7 @@ main {
     flex: 1;
 }
 
-p, h1, h2, h3, figure, ul, .row, form, button {
+p, figure, ul, .row, form, button {
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -102,8 +106,22 @@ html, body {
     flex-direction: column;
 }
 
-h1, h2, h3 {
+h1 {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+h2 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+h3 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 p, button, a, label, ul, input, option, tr, td, th, textarea, footer{
@@ -115,7 +133,7 @@ ul {
 }
 
 a {
-    color: #d9706f;
+    color: var(--red);
     font-weight: 700;
     text-decoration: none;
 }
@@ -128,7 +146,7 @@ a {
     position: relative;
     margin: 0 auto;
     overflow: hidden;
-    background-color: #000;
+    background-color: var(--black);
 }
 
 .slides > img {
@@ -170,7 +188,7 @@ a {
     transition: background-color 0.6s ease;
 }
 
-.dot.active {
+.active-dot {
     background-color: var(--cobalt);
 }
 
@@ -213,25 +231,22 @@ th, td {
 }
 
 th {
-    background-color: #e5e1f8;
+    background-color: var(--alt);
 }
 
 /* ACCORDIAN */ 
 
 .accordion {
-    background-color: #eee;
+    background-color: var(--alt);
     color: var(--cobalt);
     cursor: pointer;
-    padding: 18px;
-    width: 80%;
+    width: 100%;
     text-align: left;
     border: none;
-    outline: none;
     transition: 0.4s;
-    margin-left: 10%;
 }
 
-.accordion.active, .accordion:hover {
+.active-accordion, .accordion:hover {
     background-color: #ccc;
 }
 
@@ -243,7 +258,7 @@ th {
     margin-left: 5px;
 }
 
-.accordion.active:after {
+.active-accordion:after {
     content: "\2796"; 
 }
 
@@ -282,7 +297,7 @@ th {
     transition: opacity 0.3s ease;
 }
 
-.modal.show {
+.active-modal {
     opacity: 1;
     pointer-events: auto;
 }
@@ -416,7 +431,7 @@ form #image-preview img {
     float: left;
     width: 33.3%;
     margin-bottom: 16px;
-    padding: 0 8px;
+    margin-left: 15px;
   }
   
   @media screen and (max-width: 650px) {
@@ -446,14 +461,15 @@ form #image-preview img {
   
   .button {
     border: none;
-    outline: 0;
     display: inline-block;
-    padding: 8px;
     color: white;
     background-color: #000;
     text-align: center;
     cursor: pointer;
     width: 100%;
+    height: 25px;
+    justify-content: center;
+    align-content: center;
   }
   
   .button:hover {

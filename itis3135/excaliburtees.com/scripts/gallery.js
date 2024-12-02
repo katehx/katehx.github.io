@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
         currentGallery = gallery;
         currentIndex = index;
         modalImage.src = currentGallery[currentIndex].src;
-        modal.classList.add("show");
+        modal.classList.add("active-modal");
     };
 
     const closeModalGallery = () => {
-        modal.classList.remove("show");
+        modal.classList.remove("active-modal");
     };
 
     const showNextImage = () => {

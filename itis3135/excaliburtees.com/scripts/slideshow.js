@@ -17,7 +17,7 @@ function showSlides() {
     }
 
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].classList.add("active");
+    dots[slideIndex - 1].classList.add("active-dot");
 
     autoSlide = setTimeout(showSlides, 4000);
 }
@@ -38,10 +38,10 @@ function showSlide(index) {
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    dots.forEach(dot => dot.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active-dot"));
 
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].classList.add("active");
+    dots[slideIndex - 1].classList.add("active-dot");
 
     autoSlide = setTimeout(showSlides, 4000);
 }
