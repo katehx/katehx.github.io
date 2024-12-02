@@ -1,6 +1,5 @@
 let slideIndex = 0;
 let autoSlide;
-showSlides();
 
 function showSlides() {
     const slides = document.getElementsByClassName("slides");
@@ -9,7 +8,7 @@ function showSlides() {
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    dots.forEach(dot => dot.classList.remove("active"));
+    dots.forEach((dot) => dot.classList.remove("active"));
 
     slideIndex++;
     if (slideIndex > slides.length) {
@@ -38,7 +37,7 @@ function showSlide(index) {
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    dots.forEach(dot => dot.classList.remove("active-dot"));
+    dots.forEach((dot) => dot.classList.remove("active-dot"));
 
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].classList.add("active-dot");
@@ -58,3 +57,5 @@ const dots = document.querySelectorAll(".dot");
 dots.forEach((dot, index) => {
     dot.addEventListener("click", () => showSlide(index + 1));
 });
+
+showSlides();

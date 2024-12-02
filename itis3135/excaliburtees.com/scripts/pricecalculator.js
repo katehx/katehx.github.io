@@ -1,7 +1,7 @@
 const prices = {
     shirt: 15.00,
     hoodie: 30.00,
-    hat: 10.00,
+    hat: 10.00
 };
 const sizes = ['xs', 's', 'm', 'l', 'xl', 'xxl'];
 
@@ -10,12 +10,12 @@ function calculateTotals() {
     let hoodiesTotal = 0;
     let hatsTotal = 0;
 
-    sizes.forEach(size => {
+    sizes.forEach((size) => {
         const quantity = parseInt(document.getElementById(`${size}-shirts`).value) || 0;
         shirtsTotal += quantity * prices.shirt;
     });
 
-    sizes.forEach(size => {
+    sizes.forEach((size) => {
         const quantity = parseInt(document.getElementById(`${size}-hoodies`).value) || 0;
         hoodiesTotal += quantity * prices.hoodie;
     });
@@ -31,7 +31,7 @@ function calculateTotals() {
     document.getElementById('total').textContent = `$${total.toFixed(2)}`;
 }
 
-document.querySelectorAll('input[type="number"]').forEach(input => {
+document.querySelectorAll('input[type="number"]').forEach((input) => {
     input.addEventListener('input', calculateTotals);
 });
 
