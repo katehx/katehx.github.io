@@ -367,8 +367,8 @@ th {
 /* FORM */
 
 form {
-    width: 80%;
-    margin: 0 auto 20px auto;
+    box-sizing: border-box;
+    margin: auto 10%;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
