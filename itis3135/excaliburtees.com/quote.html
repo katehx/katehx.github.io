@@ -16,9 +16,11 @@
 
     <main>
         <h2>Get a Quote!</h2>
-        <p>Not ready to submit a quote but have questions? Check out our <a href="contact.html">contact page</a> instead!</p>
+        <p>Not ready to submit a quote but have questions? Check out our <a href="contact.html">contact page</a>
+            instead!</p>
+        <!-- feeds form submission to web3forms api -> email -->
         <form action="https://api.web3forms.com/submit" method="POST">
-                        
+            <!-- hidden form element that holds access key -->
             <input type="hidden" name="access_key" value="c3c67a80-68df-4292-802a-46df28400cdd">
 
             <label for="name">Name</label>
@@ -30,7 +32,7 @@
             <label for="phone">Phone Number (Optional)</label>
             <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
 
-            <label for="item-type">What type of item are you interested in?</label>
+            <label for="item-type">What type of product are you interested in?</label>
             <select id="item-type" name="item-type" required>
                 <option value="" disabled selected>Select an option</option>
                 <option value="tshirt">T-shirt</option>
@@ -57,11 +59,11 @@
                 <option value="no">No, I have a design ready</option>
             </select>
 
-            <label for="colors">Preferred Apparel Colors (Optional)</label>
-            <input type="text" id="colors" name="colors" placeholder="e.g., Blue, White, Red">
+            <label for="colors">Preferred Apparel Colors</label>
+            <input type="text" id="colors" name="colors" placeholder="e.g., Blue, White, Red" required>
 
-            <label for="deadline">When do you need the order completed by? (Optional)</label>
-            <input type="date" id="deadline" name="deadline">
+            <label for="deadline">When do you need the order completed by?</label>
+            <input type="date" id="deadline" name="deadline" required>
 
             <label for="message">Anything else we should know?</label>
             <textarea id="message" name="message" rows="5" placeholder="Add any additional details here"></textarea>
@@ -69,6 +71,7 @@
             <label for="file">Upload your design or logo (Optional)</label>
             <input type="file" id="file" name="file" accept="image/*">
 
+            <!-- hidden element used for image preview once user attaches file -->
             <div id="image-preview">
                 <img id="preview-img" alt="Image Preview">
             </div>
@@ -76,7 +79,8 @@
             <button type="submit">Submit</button>
         </form>
 
-        <p>Our team will review your quote and get back to you with an estimate on the project within 5 business days.</p>
+        <p>Our team will review your quote and get back to you with an estimate on the project within 5 business days.
+        </p>
     </main>
 
     <div data-include="components/footer.html"></div>
