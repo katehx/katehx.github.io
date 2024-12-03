@@ -1,10 +1,12 @@
+/* COLOR VARIABLES */
 :root {
     --cobalt: #133C55;
-    --white:rgb(250, 248, 253);
-    --grey:   ;
+    --alt-blue: #386FA4;
+    --white: rgb(250, 248, 253);
+    --grey: #ccc;
     --red: #d9706f;
     --black: #022020;
-    --alt: e5e1f8;
+    --alt: #e5e1f8;
     /* https://coolors.co/133c55-386fa4-59a5d8-84d2f6-91e5f6 */
 }
 
@@ -27,14 +29,14 @@ header {
     margin: 10px 15px;
 }
 
-header > nav {
+header>nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     flex-grow: 1;
 }
 
-header > nav ul {
+header>nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -42,8 +44,9 @@ header > nav ul {
     margin-left: auto;
 }
 
-header > nav ul li a {
+header>nav ul li a {
     display: block;
+    font-weight: 150;
     color: var(--white);
     text-align: center;
     text-decoration: none;
@@ -54,7 +57,7 @@ header > nav ul li a {
     align-content: center;
 }
 
-header > nav ul li a:hover {
+header>nav ul li a:hover {
     color: var(--cobalt);
     background-color: var(--white);
 }
@@ -62,25 +65,25 @@ header > nav ul li a:hover {
 /* FOOTER */
 
 footer {
-    background-color: var(--cobalt);     
-    color: var(--white); 
-    text-align: center; 
+    background-color: var(--cobalt);
+    color: var(--white);
+    text-align: center;
     padding: 10px 0;
-    width: 100%; 
+    width: 100%;
 }
 
 .footer-logo {
-    width: 30px; 
-    height: auto; 
-    margin-bottom: 8px; 
+    width: 30px;
+    height: auto;
+    margin-bottom: 8px;
 }
 
-footer > p {
-    margin: 0;     
-    font-size: 14px; 
+footer>p {
+    margin: 0;
+    font-size: 14px;
 }
 
-/* MAIN PAGE CONTENT */
+/* GENERAL PAGE CONTENT */
 
 main {
     background-color: var(--white);
@@ -88,7 +91,13 @@ main {
     flex: 1;
 }
 
-p, figure, ul, .row, form, button {
+/* margins without messing up the slideshow on home page */
+p,
+figure,
+ul,
+.row,
+form,
+button {
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -99,33 +108,44 @@ body {
     background-color: var(--white);
 }
 
-html, body {
+/* makes the footer sit at the bottom of the page rather than floating */
+html,
+body {
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
 }
 
-h1 {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
 h2 {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-left: 10%;
-    padding-right: 10%;
+    font-size: 45px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px 10%;
+    margin: 10px 0 10px 0;
 }
 
 h3 {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-left: 10%;
-    padding-right: 10%;
+    font-size: 30px;
+    ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px 10%;
+    margin: 10px 0 10px 0;
 }
 
-p, button, a, label, ul, input, option, tr, td, th, textarea, footer{
+p,
+button,
+a,
+label,
+ul,
+input,
+option,
+tr,
+td,
+th,
+textarea,
+footer {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
 }
 
 ul {
@@ -134,12 +154,12 @@ ul {
 
 a {
     color: var(--red);
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
 }
 
 /* SLIDESHOW */
-
+/* https://www.w3schools.com/howto/howto_js_slideshow.asp */
 .slideshow-container {
     width: 100%;
     height: 400px;
@@ -149,31 +169,32 @@ a {
     background-color: var(--black);
 }
 
-.slides > img {
+.slides>img {
     width: 100%;
     height: 400px;
     object-fit: cover;
 }
 
 /* masterminds */
-.slides:nth-child(1) > img {
+.slides:nth-child(1)>img {
     object-position: center 65%;
 }
 
 /* steam engine */
-.slides:nth-child(2) > img {
+.slides:nth-child(2)>img {
     object-position: center 67%;
 }
 
 /* roboduckies */
-.slides:nth-child(3) > img {
+.slides:nth-child(3)>img {
     object-position: center 72%;
 }
 
+/* navigation dots */
 .slideshow-container .dots {
     position: absolute;
     bottom: 10px;
-    width: 100%; 
+    width: 100%;
     text-align: center;
 }
 
@@ -192,7 +213,9 @@ a {
     background-color: var(--cobalt);
 }
 
-.prev, .next {
+/* navigation arrows */
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -212,8 +235,9 @@ a {
     border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* TABLE */
@@ -224,7 +248,8 @@ table {
     margin: 20px auto;
 }
 
-th, td {
+th,
+td {
     border: 1px solid var(--cobalt);
     padding: 8px;
     text-align: center;
@@ -234,11 +259,13 @@ th {
     background-color: var(--alt);
 }
 
-/* ACCORDIAN */ 
-
+/* ACCORDIAN */
+/* https://www.w3schools.com/howto/howto_js_accordion.asp */
 .accordion {
     background-color: var(--alt);
     color: var(--cobalt);
+    font-size: 20px;
+    font-weight: 800;
     cursor: pointer;
     width: 100%;
     text-align: left;
@@ -246,20 +273,23 @@ th {
     transition: 0.4s;
 }
 
-.active-accordion, .accordion:hover {
-    background-color: #ccc;
+.active-accordion,
+.accordion:hover {
+    background-color: var(--grey);
 }
 
+/* arrow before accordian is expanded */
 .accordion:after {
-    content: '\02795'; 
+    content: '\25B6';
     font-size: 13px;
-    color: #777;
+    color: var(--cobalt);
     float: right;
     margin-left: 5px;
 }
 
+/* arrow after accordian is expanded */
 .active-accordion:after {
-    content: "\2796"; 
+    content: "\25BC";
 }
 
 .panel {
@@ -269,8 +299,7 @@ th {
     transition: max-height 0.2s ease-out;
 }
 
-
-.panel > img {
+.panel>img {
     margin-left: 10%;
     margin-bottom: 5px;
     height: 200px;
@@ -278,8 +307,11 @@ th {
     border-radius: 15px;
 }
 
-/* GALLERY */ 
+/* GALLERY */
+/* https://www.w3schools.com/howto/howto_css_modal_images.asp */
+/* https://stackoverflow.com/questions/67189798/i-have-an-image-gallery-and-i-want-to-open-each-image-using-modal-when-click-on */
 
+/* focused image */
 .modal {
     position: fixed;
     top: 0;
@@ -314,6 +346,7 @@ th {
     object-fit: contain;
 }
 
+/* icons for navigation within focused/modal image */
 .close-modal,
 .modal-prev,
 .modal-next {
@@ -364,13 +397,12 @@ th {
     transform: scale(1.05);
 }
 
-/* FORM */
-
+/* FORMS */
 form {
     box-sizing: border-box;
     margin: auto 10%;
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--grey);
     border-radius: 8px;
     background-color: var(--white);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -380,19 +412,19 @@ form label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #333;
+    color: var(--cobalt);
 }
 
-form input, 
-form select, 
-form textarea, 
+form input,
+form select,
+form textarea,
 form button {
     display: block;
     width: 100%;
     margin-bottom: 15px;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--grey);
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -409,11 +441,11 @@ form button {
     padding: 10px 20px;
     font-size: 18px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
 }
 
 form button:hover {
-    background-color: #386FA4; 
+    background-color: var(--alt-blue);
 }
 
 form input[type="file"] {
@@ -423,73 +455,53 @@ form input[type="file"] {
 form #image-preview img {
     display: block;
     margin: 10px auto;
-    border: 1px solid #ddd;
+    border: 1px solid var(--white);
     border-radius: 5px;
 }
 
+/* MEET THE TEAM  */
+/* https://www.w3schools.com/howto/howto_css_team.asp */
 .column {
     float: left;
     width: 33.3%;
     margin-bottom: 16px;
     margin-left: 15px;
-  }
-  
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 100%;
-      display: block;
-    }
-  }
-  
-  .card {
+}
+
+.card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-  
-  .container {
+}
+
+.container {
     padding: 0 16px;
-  }
-  
-  .container::after, .row::after {
+}
+
+.container::after,
+.row::after {
     content: "";
     clear: both;
     display: table;
-  }
-  
-  .title {
-    color: grey;
-  }
-  
-  .button {
-    border: none;
-    display: inline-block;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    height: 25px;
-    justify-content: center;
-    align-content: center;
-  }
-  
-  .button:hover {
-    background-color: #555;
-  }
+}
 
-  .card > img {
+.title {
+    color: var(--cobalt);
+}
+
+.card>img {
     width: 100%;
     height: 400px;
     position: relative;
     margin: 0 auto;
     overflow: hidden;
-    background-color: #000;
+    background-color: var(--black);
     object-fit: cover;
-  }
+}
 
-  .column > .card > img {
+.column>.card>img {
     object-position: center 40%;
 }
 
+/* individual positioning for profile pictures */
 .card img[src*="steph.jpg"] {
     object-position: center 40%;
 }
@@ -506,25 +518,46 @@ form #image-preview img {
     object-position: center 45%;
 }
 
+/* BUTTON LINK */
+.button {
+    border: none;
+    display: inline-block;
+    color: var(--white);
+    background-color: var(--cobalt);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    height: 25px;
+    justify-content: center;
+    align-content: center;
+}
+
+.button:hover {
+    background-color: var(--alt-blue);
+}
+
+/* FORM IMAGE PREVIEW */
+/* https://stackoverflow.com/questions/4459379/preview-an-image-before-it-is-uploaded */
 #image-preview {
     margin-top: 10px;
-  }
-  
-  #preview-img {
+}
+
+#preview-img {
     max-width: 100%;
     max-height: 200px;
     display: none;
-  }
-  
-  #preview-img:after {
+}
+
+#preview-img:after {
     content: "Image Preview";
-  }
-  
-  .home-featured-image {
+}
+
+/* IMAGE ON HOME PAGE */
+.home-featured-image {
     display: block;
-    margin: 20px auto; 
+    margin: 20px auto;
     border: 4px solid var(--cobalt);
-    border-radius: 15px; 
+    border-radius: 15px;
     max-width: 80%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
