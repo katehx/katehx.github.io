@@ -17,39 +17,26 @@
 
         <main>
 
-            <!-- Display current time, date, and day -->
-            <h3></h3>
-
-            <!-- Form for user input -->
-            <form id="user-fnfo-form">
-                <label for="userName">What is your name?</label>
-                <input type="text" id="user-name" placeholder="Enter your name" required>
-
-                <label for="userMood">How are you feeling?</label>
-                <input type="text" id="user-mood" placeholder="Enter your mood" required>
-
-                <button type="button" onclick="processUserInfo()">Submit</button>
+            <h3 id="date-display"></h3>
+            <form id="user-form">
+                <label for="name">Enter your name:</label>
+                <input type="text" id="name" required>
+                <label for="mood">How are you feeling today?</label>
+                <input type="text" id="mood" required>
+                <button type="submit">Submit</button>
             </form>
+            <h3 id="greeting"></h3>
 
-            <!-- Greeting output -->
-            <p id="greetingMessage"></p>
+            <label for="fav-number">Enter your favorite number:</label>
+            <input type="number" id="fav-number">
+            <button id="polygon-submit">Submit</button>
+            <h3 id="polygon-output"></h3>
 
-            <!-- Polygon form -->
-            <form id="polygonForm">
-                <label for="favoriteNumber">Enter your favorite number (0-10):</label>
-                <input type="number" id="favoriteNumber" min="0" max="10" step="any" required>
-
-                <button type="button" onclick="processPolygonInfo()">Find Polygon</button>
-            </form>
-
-            <!-- Action buttons for brand-specific functions -->
-            <div id="brandActions">
-                <button onclick="randomHamsterFact()">Random Hamster Fact</button>
-                <button onclick="calculateHamsterRunSpeed()">Calculate Hamster Speed</button>
-                <button onclick="generateHamsterName()">Generate Hamster Name</button>
-                <button onclick="suggestHamsterDiet()">Suggest Hamster Diet</button>
-                <button onclick="planHamsterAdventure()">Plan Hamster Adventure</button>
-            </div>
+            <h3>Fun Company Functions</h3>
+            <button id="function-one">Function One</button>
+            <button id="function-two">Function Two</button>
+            <button id="function-three">Function Three</button>
+            <button id="function-four">Function Four</button>
             
         </main>
 
