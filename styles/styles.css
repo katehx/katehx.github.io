@@ -53,6 +53,12 @@ h4 {
     margin: 0 0 20px 0;
 }
 
+p, ul li, a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px; 
+    margin: 0;
+}
+
 header {
     display: flex; /* Use Flexbox for layout */
     justify-content: space-between; /* Push items to the far ends of the header */
@@ -268,4 +274,25 @@ th {
     padding: 2%;
     border-radius: 10px;
     margin-bottom: 2%;
+}
+
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #24292e;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.github-button img {
+    margin-right: 8px;
+}
+
+.github-button:hover {
+    background-color: #444d56;
 }
