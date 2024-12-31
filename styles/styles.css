@@ -8,7 +8,7 @@
     --dark: #0C1C1A;
     --dark2: #1F4743;
     --dark3: #204642;
-    --light-grey: #433030;
+    --light-grey: #caaeae;
 }
 
 html {
@@ -20,13 +20,21 @@ main {
     margin: 10px 5%;
     padding: 10px 2%;
     border-radius: 10px;
-    border-color: blueviolet;
-    border-width: 10px;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    color: var(--white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
 }
 
 h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 5vh;
+    font-size: 45px;
     display: flex;
     justify-content: center;
     color: var(--dark3)
@@ -34,9 +42,87 @@ h2 {
 
 h3 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 3vh;
-    color: var(--dark3)
+    font-size: 30px;
+    color: var(--dark3);
 }
+
+h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    color: var(--dark3);
+    margin: 0 0 20px 0;
+}
+
+header {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Push items to the far ends of the header */
+    align-items: center; /* Vertically align items */
+    padding: 15px 30px; /* Add some padding around the header */
+}
+
+header nav {
+    display: flex; /* Use Flexbox for the nav links */
+    gap: 15px; /* Add spacing between links */
+    color: var(--white);
+}
+
+h1 a {
+    text-decoration: none; /* Remove underline */
+    color: var(--white); /* Optional: link color */
+}
+
+header nav a {
+    text-decoration: none; /* Remove underline */
+    color: var(--white); /* Optional: link color */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px; /* Adjust font size */
+    transition: color 0.3s ease; /* Optional: smooth color transition on hover */
+}
+
+header nav a:hover {
+    color: var(--dark3); /* Optional: hover effect color */
+}
+
+footer {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center align items horizontally */
+    justify-content: center; /* Center align items vertically */
+    text-align: center; /* Center text */
+    color: var(--white); /* White text for contrast */
+    padding: 20px; /* Add some padding around the footer */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Make the footer span the full width of the page */
+    z-index: 10; /* Ensure it stays on top of other content */
+}
+
+footer nav {
+    display: flex; /* Use flexbox for navigation links */
+    gap: 15px; /* Space between links */
+    margin-bottom: 10px; /* Add space between the nav and the paragraph */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px; /* Adjust font size */
+}
+
+footer nav a {
+    text-decoration: none; /* Remove underline */
+    color: var(--white); /* Optional: link color */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px; /* Adjust font size */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+footer nav a:hover {
+    color: var(--dark3); /* Highlight color on hover */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px; /* Adjust font size */
+}
+
 
 
 /* lalalalal */
