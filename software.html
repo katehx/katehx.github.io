@@ -107,6 +107,86 @@
         <!-- End task manager project -->
 
 
+        <div class="project">
+            <h4>Autonomous Robot Code</h4>
+
+            <div class="content-container">
+
+                <div class="left-content">
+
+                    <p><strong>Program: </strong><em>FIRST</em> Tech Challenge - 2021-21 Ultimate Goal Season</p>
+                    
+                    <p><strong>Project Objective: </strong>Design, build, and program a robot to collect and shoot rings into appropriate goals both autonously and driver controlled. Additional game tasks include parking in appropriate locations, delivering moveable goals to approrpa8ite locations, and hitting higher percision targets during special time periods.</p>
+
+                    <p><strong>Game Summary: </strong><a href="https://www.youtube.com/watch?v=VVxz2Kr9Jgw">https://www.youtube.com/watch?v=VVxz2Kr9Jgw</a></p>
+
+                    
+                    <p><strong>Language: </strong>Android Studio Java with RoadRunner Pathplanning Library, OpenCV Vision Sensing Library, and PID motor control.</p>
+
+                    <p><strong>Applied Skills &amp; Concepts: </strong>, &amp; .</p>
+
+                    <p><strong>Performance Statistics:</strong></p>
+                    <ul>
+                        <li><a href="https://ftc-events.firstinspires.org/2020/USNCGRCT1/rankings">10th overall robot score</a> in North Carolina for 2020-21 season</li>
+                        <li><a href="https://ftc-events.firstinspires.org/2020/USNCGRCT1/rankings">7th ranked autonomus score</a> at North Carolina State Championship</li>
+                        <li><a href="https://ftc-events.firstinspires.org/2020/USNCGRCT1/rankings">149th ranked OPR internationally</a></li>
+                    </ul>
+
+                    <a href="https://github.com/katehx/ITCS-3112" class="github-button">
+                        <img src="images/github-mark-white.svg" alt="GitHub Logo" width="30" height="30">
+                        GitHub Repository
+                    </a>
+
+                </div>
+
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/p4VDbe0auMw" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+
+            <button class="accordion">More Project Information</button>
+            <div class="panel">
+                <p><strong>Technology Used:</strong></p>
+                <ul>
+                    <li><strong>Vision Sensing: </strong>Used a USB camera and the OpenCV Vision Library to autonously read if there was a stack of 0, 1, or 4 rings at the beginning of the match. Based off of this random ring placement the robot would then follow a unique path for bonus points.</li>
+                    <li><strong>Dead-Wheel Encoders: </strong>Three dead-wheel encoders were mounted on the chassis of the robot. These encoders would directly read the robots position on the field and elimate the encoder drift or slippage that would occur with the motor encoders directly attached to the drive wheels.</li>
+                    <li><strong>RoadRunner Pathplanning: </strong>This libary enabled the data from the dead-wheel encoders to be used to create advanced movement paths. The useage of splines along with the dead-wheels allowed for consistent and effecient autonoums paths. The libary required the tuning of multiple PID feedback loops and multiple constraints to be tuned to the specific robot.</li>
+                    <li><strong>PID Shooter Feedback: </strong>The flywheel on the robot was prone to inconsistencies from battery voltage. Implementing and tuning a PID feedback loop onto this shooter helped the system get to a specific RPM rather than a percentage based power. The PID works to track and then correct the flywheel as it goes off track of the goal RPM.</li>
+                </ul>
+
+                <p><strong>Key Learnings &amp; Takeaways: </strong>This project was my first experience integrating code that would interact with the physical world. It introduced a new perspective that came with significant challenges, but also taught me valuable lessons. Factors such as battery voltage, floor and wheel friction, and trajectory changes due to varying flywheel speeds were just a few of the obstacles I encountered. In these situations, the importance of sensors and more advanced algorithms became clear.</p>
+                <p>Dead-wheel encoders proved invaluable for tracking the robot's position on the field, even when slippage occurred with motor encoders from diving. Similarly, motor encoders on the shooter's flywheel, controlled by a PID feedback loop, ensured consistent ring trajectories despite inconsistencies in battery levels.</p>
+                <p>The implementation of libraries throughout this project highlighted the importance of being able to read and comprehend other people's code. Many issues during the implementation process arose from not fully understanding the purpose of functionality of the code. However, once I took the time to read through and understand the code, tuning it for my specific situation became much easier.</p>
+                <p>While working with the OpenCV Vision Library I had to familiarize myself with concepts such as Gaussian blur, which is used to reduce noise and smooth images for better vision processing. This comprehension was crucial for accurately reading and interpreting the vision tuning numbers. Additionally, I had to learn how the library handles adjustments of bounding box sizes and placement along with the hue range adjustments. Understanding how to properly use the library lead to consistent and reliable vision sensing.</p>
+
+                <p><strong>Project Documentation:</strong></p>
+
+                <div class="milestones-container">
+                    <!-- Control Award -->
+                    <figure>
+                        <a
+                            href="https://docs.google.com/presentation/d/1e111cMuZ5l06iNjhdlawA3Fr7H6VSzxAxaPLuBcEzII/edit?usp=sharing">
+                            <img src="./images/controlDoc.png" alt="Control Award Submission">
+                            <figcaption>Control (Programming) Award Submission:</figcaption>
+                        </a>
+                    </figure>
+
+                    <!-- Software Notebook -->
+                    <figure>
+                        <a
+                            href="https://docs.google.com/presentation/d/1LBSXb3CYa38pA_WcP5y6NjGr1qkPAJJjJWLEOPgY4DE/edit?usp=sharing">
+                            <img src="./images/softwareNotebook.png" alt="Software Technical Binder">
+                            <figcaption>Software Technical Documentation</figcaption>
+                        </a>
+                    </figure>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- End robot autonomous code project -->
+
     </main>
 
     <div data-include="components/footer.html"></div>
