@@ -296,3 +296,31 @@ th {
 .github-button:hover {
     background-color: #444d56;
 }
+
+.milestones-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+.milestones-container figure {
+    text-align: center;
+    margin: 10px;
+    flex: 1 1 calc(25% - 20px); /* Adjusts width to fit 4 items in a row */
+    max-width: 200px; /* Optional: Restrict max width of each milestone */
+}
+
+.milestones-container img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd; /* Optional: Add a border around the image */
+    border-radius: 5px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+}
+
+.milestones-container figcaption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333; /* Adjust color to match your theme */
+}
