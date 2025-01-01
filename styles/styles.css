@@ -37,7 +37,7 @@ h2 {
     font-size: 45px;
     display: flex;
     justify-content: center;
-    color: var(--dark3)
+    color: var(--dark3);
 }
 
 h3 {
@@ -128,23 +128,19 @@ footer p {
     font-size: 18px; /* Adjust font size */
 }
 
-
-
-/* lalalalal */
-
 /* Flexbox for content-container */
 .content-container {
     display: flex;
     align-items: flex-start;
-    gap: 20px; /* Space between the left content and the iframe */
-    margin-bottom: 20px; /* Add space between the content and accordion */
-    max-width: 100%; /* Prevent content-container from exceeding main width */
-    overflow: hidden;
+    justify-content: space-between;
+    gap: 20px; /* Space between left-content and iframe-container */
+    margin-bottom: 20px;
+    max-width: 100%;
 }
 
 /* Left content styles */
 .left-content {
-    flex: 1; /* Allow left content to take up available space */
+    flex: 1 1 50%; /* Always 50% width */
     display: flex;
     flex-direction: column; /* Stack content vertically */
     gap: 10px; /* Space between stacked items */
@@ -153,13 +149,23 @@ footer p {
     padding: 10px;
 }
 
+/* Reduce spacing in left-content */
+.left-content p {
+    margin-bottom: 5px; /* Adjust spacing between paragraphs */
+}
+
+.left-content ul {
+    margin-top: 5px; /* Reduce spacing between the heading and list */
+    margin-bottom: 5px; /* Reduce spacing between the list and the next paragraph */
+}
+
 /* Iframe container styles */
 .iframe-container {
-    flex-shrink: 0; /* Prevent the iframe from shrinking */
-    width: 560px; /* Fixed width for iframe */
-    height: 315px; /* Fixed height for 16:9 ratio */
-    position: relative; /* Required for padding-bottom trick */
+    flex: 1 1 50%; /* Always 50% width */
+    position: relative;
     overflow: hidden;
+    width: 100%;
+    padding-top: 30%; /* Aspect ratio for 16:9 */
     border-radius: 10px;
 }
 
@@ -169,11 +175,11 @@ footer p {
     left: 0;
     width: 100%; /* Full width of the container */
     height: 100%; /* Full height of the container */
+    border-radius: 10px;
 }
 
-  
-  /* tables */
-  table {
+/* Tables */
+table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
@@ -200,25 +206,7 @@ th {
     background-color: #f9f9f9;
 }
 
-.iframe-container {
-    flex-shrink: 0; /* Prevent the iframe from shrinking */
-    width: 800px; /* Reduce the width of the iframe */
-    height: 450px; /* 16:9 aspect ratio */
-    position: relative;
-    overflow: hidden;
-}
-
-.iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Fill the container width */
-    height: 100%; /* Fill the container height */
-}
-
-
-/* ACCORDIAN */
-/* https://www.w3schools.com/howto/howto_js_accordion.asp */
+/* Accordion */
 .accordion {
     margin-bottom: 10px; /* Add space below the button */
     background-color: var(--third);
@@ -238,7 +226,7 @@ th {
     background-color: var(--dark2);
 }
 
-/* arrow before accordian is expanded */
+/* arrow before accordion is expanded */
 .accordion:after {
     content: '\25B6';
     font-size: 13px;
@@ -247,7 +235,7 @@ th {
     margin-left: 5px;
 }
 
-/* arrow after accordian is expanded */
+/* arrow after accordion is expanded */
 .active-accordion:after {
     content: "\25BC";
 }
@@ -261,7 +249,7 @@ th {
     border-radius: 10px;
 }
 
-.panel>img {
+.panel > img {
     margin-left: 10%;
     margin-bottom: 5px;
     height: 200px;
