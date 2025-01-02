@@ -213,11 +213,14 @@ footer p {
     cursor: pointer;
     height: 45px;
     width: 100%;
-    padding: 10px;
     text-align: left;
     border: none;
     transition: 0.4s;
     border-radius: 8px;
+}
+
+button {
+    padding-left: 10px;
 }
 
 .active-accordion, .accordion:hover {
@@ -397,7 +400,7 @@ th {
     color: var(--white);
 }
 
-.project-button.active {
+.active-button {
     background-color: var(--main);
     color: var(--white);
     pointer-events: none;
