@@ -18,6 +18,100 @@
 
         <h2>Software Projects</h2>
 
+        <!-- "menu" for changing which project type -->
+        <nav class="projects">
+            <a href="./software.html" class="project-button active">Software Projects</a>
+            <a href="./mechanical.html" class="project-button">Hardware Projects</a>
+            <a href="./otherprojects.html" class="project-button">Other Projects</a>
+        </nav>        
+
+        <div class="project">
+            <h4>Autonomous Robot Code</h4>
+
+            <div class="content-container">
+
+                <div class="left-content">
+
+                    <p><strong>Program: </strong><em>FIRST</em> Tech Challenge - 2021-21 Ultimate Goal Season</p>
+                    
+                    <p><strong>Date: </strong>August 2020 - February 2021</p>
+
+                    <p><strong>Project Objective: </strong>Design, build, and program a robot to collect and shoot rings into appropriate goals both autonously and driver controlled. Additional game tasks include parking in appropriate locations, delivering moveable goals to appropriate locations, and hitting higher percision targets during special time periods.</p>
+
+                    <p><strong>Game Summary: </strong><a href="https://www.youtube.com/watch?v=VVxz2Kr9Jgw" target="_blank">https://www.youtube.com/watch?v=VVxz2Kr9Jgw</a></p>
+
+                    
+                    <p><strong>Languages &amp; Libraries: </strong>Android Studio Java with RoadRunner Pathplanning Library, OpenCV Vision Sensing Library, and PID motor control.</p>
+
+                    <p><strong>Applied Skills &amp; Concepts: </strong>Sensor Integration, PID Feedback Control Systems, Vision Processing, Path Planning Algorithms, &amp; Code Optimization.</p>
+
+                    <p><strong>Performance Statistics:</strong></p>
+                    <ul>
+                        <li><a href="https://ftc-events.firstinspires.org/2020/USNCGRCT1/rankings" target="_blank">10th overall robot score</a> in North Carolina for 2020-21 season</li>
+                        <li><a href="https://ftc-events.firstinspires.org/2020/USNCGRCT1/rankings" target="_blank">7th ranked autonomus score</a> at North Carolina State Championship</li>
+                        <li><a href="https://ftc-events.firstinspires.org/2020/USNCGRCT1/rankings" target="_blank">149th ranked OPR</a> internationally</li>
+                    </ul>
+
+                    <a href="https://github.com/Tundrabots7083/TundrabotsUltimateGoal/blob/Game_Branch_Napoleon_Bonaparte/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/ops/bad.java" class="github-button" target="_blank">
+                        <img src="images/github-mark-white.svg" alt="GitHub Logo" width="30" height="30">
+                        GitHub Repository
+                    </a>
+
+                </div>
+
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/p4VDbe0auMw" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+
+            <button class="accordion">More Project Information</button>
+            <div class="panel">
+                <p><strong>Technology Used:</strong></p>
+                <ul>
+                    <li><strong>Vision Sensing: </strong>Used a USB camera and the OpenCV Vision Library to autonously read if there was a stack of 0, 1, or 4 rings at the beginning of the match. Based off of this random ring placement the robot would then follow a unique path for bonus points.</li>
+                    <li><strong>Dead-Wheel Encoders: </strong>Three dead-wheel encoders were mounted on the chassis of the robot. These encoders would directly read the robots position on the field and elimate the encoder drift or slippage that would occur with the motor encoders directly attached to the drive wheels.</li>
+                    <li><strong>RoadRunner Pathplanning: </strong>This libary enabled the data from the dead-wheel encoders to be used to create advanced movement paths. The useage of splines along with the dead-wheels allowed for consistent and effecient autonoums paths. The libary required the tuning of multiple PID feedback loops and multiple constraints to be tuned to the specific robot.</li>
+                    <li><strong>PID Shooter Feedback: </strong>The flywheel on the robot was prone to inconsistencies from battery voltage. Implementing and tuning a PID feedback loop onto this shooter helped the system get to a specific RPM rather than a percentage based power. The PID works to track and then correct the flywheel as it goes off track of the goal RPM.</li>
+                </ul>
+
+                <p><strong>Key Learnings &amp; Takeaways: </strong>This project was my first experience integrating code that would interact with the physical world. It introduced a new perspective that came with significant challenges, but also taught me valuable lessons. Factors such as battery voltage, floor and wheel friction, and trajectory changes due to varying flywheel speeds were just a few of the obstacles I encountered. In these situations, the importance of sensors and more advanced algorithms became clear.</p>
+                <p>Dead-wheel encoders proved invaluable for tracking the robot's position on the field, even when slippage occurred with motor encoders from diving. Similarly, motor encoders on the shooter's flywheel, controlled by a PID feedback loop, ensured consistent ring trajectories despite inconsistencies in battery levels.</p>
+                <p>The implementation of libraries throughout this project highlighted the importance of being able to read and comprehend other people's code. Many issues during the implementation process arose from not fully understanding the purpose of functionality of the code. However, once I took the time to read through and understand the code, tuning it for my specific situation became much easier.</p>
+                <p>While working with the OpenCV Vision Library I had to familiarize myself with concepts such as Gaussian blur, which is used to reduce noise and smooth images for better vision processing. This comprehension was crucial for accurately reading and interpreting the vision tuning numbers. Additionally, I had to learn how the library handles adjustments of bounding box sizes and placement along with the hue range adjustments. Understanding how to properly use the library lead to consistent and reliable vision sensing.</p>
+
+                <figure>
+                    <img src="./images/confusion.png" alt="Kate confused with 3 laptops">
+                    <figcaption>Some days were full of confusion...</figcaption>
+                </figure>
+
+                <p><strong>Project Documentation:</strong></p>
+
+                <div class="milestones-container">
+                    <!-- Control Award -->
+                    <figure>
+                        <a
+                            href="https://docs.google.com/presentation/d/1e111cMuZ5l06iNjhdlawA3Fr7H6VSzxAxaPLuBcEzII/edit?usp=sharing" target="_blank">
+                            <img src="./images/controlDoc.png" alt="Control Award Submission">
+                            <figcaption>Control (Programming) Award Submission</figcaption>
+                        </a>
+                    </figure>
+
+                    <!-- Software Notebook -->
+                    <figure>
+                        <a
+                            href="https://docs.google.com/presentation/d/1LBSXb3CYa38pA_WcP5y6NjGr1qkPAJJjJWLEOPgY4DE/edit?usp=sharing" target="_blank">
+                            <img src="./images/softwareNotebook.png" alt="Software Technical Binder">
+                            <figcaption>Software Technical Documentation</figcaption>
+                        </a>
+                    </figure>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- End robot autonomous code project -->
+
         <div class="project">
             <h4>Personal Task Manager</h4>
 
@@ -27,6 +121,8 @@
 
                     <p><strong>Course: </strong>ITCS 3112 - Design and Implementation of Object-Oriented Systems</p>
                     
+                    <p><strong>Date: </strong>Fall 2024</p>
+
                     <p><strong>Project Objective: </strong>Design and implement a small-scale software application using object-oriented programming principles.</p>
 
                     <p><strong>Project Milestones:</strong></p>
@@ -100,39 +196,38 @@
                 </div>
 
                 <p><strong>Final Presentation:</strong></p>
-                <iframe src="https://www.youtube.com/embed/FTHMhRQDHk8" frameborder="0" allowfullscreen></iframe>
-
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/FTHMhRQDHk8" frameborder="0" allowfullscreen></iframe>
+                </div>
+                
             </div>
         </div>
         <!-- End task manager project -->
 
-
         <div class="project">
-            <h4>Autonomous Robot Code</h4>
+            <h4>Web Development Course Website</h4>
 
             <div class="content-container">
 
                 <div class="left-content">
 
-                    <p><strong>Program: </strong><em>FIRST</em> Tech Challenge - 2021-21 Ultimate Goal Season</p>
+                    <p><strong>Course: </strong>ITIS 3135 - Web-Based Application Design and Development</p>
                     
-                    <p><strong>Project Objective: </strong>Design, build, and program a robot to collect and shoot rings into appropriate goals both autonously and driver controlled. Additional game tasks include parking in appropriate locations, delivering moveable goals to appropriate locations, and hitting higher percision targets during special time periods.</p>
+                    <p><strong>Date: </strong>Fall 2024</p>
 
-                    <p><strong>Game Summary: </strong><a href="https://www.youtube.com/watch?v=VVxz2Kr9Jgw" target="_blank">https://www.youtube.com/watch?v=VVxz2Kr9Jgw</a></p>
+                    <p><strong>Project Objective: </strong>A multipage website was to be developed over the course of a semester. Pages covered a range of basic web development concepts.</p>
 
+                    <p><strong>Link: </strong><a href="https://webpages.charlotte.edu/khicks35/itis3135/">https://webpages.charlotte.edu/khicks35/itis3135/</a></p>
                     
-                    <p><strong>Languages &amp; Libraries: </strong>Android Studio Java with RoadRunner Pathplanning Library, OpenCV Vision Sensing Library, and PID motor control.</p>
+                    <p><strong>Languages: </strong>HTML, CSS, &amp; JavaScript.</p>
 
-                    <p><strong>Applied Skills &amp; Concepts: </strong>Sensor Integration, PID Feedback Control Systems, Vision Processing, Path Planning Algorithms, &amp; Code Optimization.</p>
+                    <p><strong>Certifications: </strong><a href="https://www.freecodecamp.org/certification/katehi/responsive-web-design">FCC Responsive Web Design</a> &amp; <a href="https://www.freecodecamp.org/certification/katehi/javascript-algorithms-and-data-structures-v8">JavaScript Algorithms and Data Structures</a></p>
 
-                    <p><strong>Performance Statistics:</strong></p>
-                    <ul>
-                        <li><a href="https://ftc-events.firstinspires.org/2020/USNCGRCT1/rankings" target="_blank">10th overall robot score</a> in North Carolina for 2020-21 season</li>
-                        <li><a href="https://ftc-events.firstinspires.org/2020/USNCGRCT1/rankings" target="_blank">7th ranked autonomus score</a> at North Carolina State Championship</li>
-                        <li><a href="https://ftc-events.firstinspires.org/2020/USNCGRCT1/rankings" target="_blank">149th ranked OPR</a> internationally</li>
-                    </ul>
+                    <p><strong>Applied Skills &amp; Concepts: </strong>Flexbox CSS styling, Document Object Model (DOM) Manipulation, Web accessibility standards, Form validation and input handling, FTP for website deployment, CRAP design principles, & responsive web design concepts.</p>
 
-                    <a href="https://github.com/Tundrabots7083/TundrabotsUltimateGoal/blob/Game_Branch_Napoleon_Bonaparte/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/ops/bad.java" class="github-button" target="_blank">
+                    <p><strong>Key Learnings &amp; Takeaways: </strong>Building my own website gave me an understanding of core web development principles and major web languages such as HTML, CSS, and JavaScript. Additionally, through the concepts learned in this course, I gained a better understanding of topics such as DNS, XSS attacks, and how systems like the DOM interact with other technologies. My new understanding of how web development functions will benefit me in other computer science disciplines as well.</p>
+
+                    <a href="https://github.com/katehx/katehx.github.io/tree/main/itis3135" class="github-button" target="_blank">
                         <img src="images/github-mark-white.svg" alt="GitHub Logo" width="30" height="30">
                         GitHub Repository
                     </a>
@@ -140,74 +235,38 @@
                 </div>
 
                 <div class="iframe-container">
-                    <iframe src="https://www.youtube.com/embed/p4VDbe0auMw" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/t1Bj56zdQIQ" frameborder="0" allowfullscreen></iframe>
                 </div>
 
             </div>
 
-            <button class="accordion">More Project Information</button>
-            <div class="panel">
-                <p><strong>Technology Used:</strong></p>
-                <ul>
-                    <li><strong>Vision Sensing: </strong>Used a USB camera and the OpenCV Vision Library to autonously read if there was a stack of 0, 1, or 4 rings at the beginning of the match. Based off of this random ring placement the robot would then follow a unique path for bonus points.</li>
-                    <li><strong>Dead-Wheel Encoders: </strong>Three dead-wheel encoders were mounted on the chassis of the robot. These encoders would directly read the robots position on the field and elimate the encoder drift or slippage that would occur with the motor encoders directly attached to the drive wheels.</li>
-                    <li><strong>RoadRunner Pathplanning: </strong>This libary enabled the data from the dead-wheel encoders to be used to create advanced movement paths. The useage of splines along with the dead-wheels allowed for consistent and effecient autonoums paths. The libary required the tuning of multiple PID feedback loops and multiple constraints to be tuned to the specific robot.</li>
-                    <li><strong>PID Shooter Feedback: </strong>The flywheel on the robot was prone to inconsistencies from battery voltage. Implementing and tuning a PID feedback loop onto this shooter helped the system get to a specific RPM rather than a percentage based power. The PID works to track and then correct the flywheel as it goes off track of the goal RPM.</li>
-                </ul>
-
-                <p><strong>Key Learnings &amp; Takeaways: </strong>This project was my first experience integrating code that would interact with the physical world. It introduced a new perspective that came with significant challenges, but also taught me valuable lessons. Factors such as battery voltage, floor and wheel friction, and trajectory changes due to varying flywheel speeds were just a few of the obstacles I encountered. In these situations, the importance of sensors and more advanced algorithms became clear.</p>
-                <p>Dead-wheel encoders proved invaluable for tracking the robot's position on the field, even when slippage occurred with motor encoders from diving. Similarly, motor encoders on the shooter's flywheel, controlled by a PID feedback loop, ensured consistent ring trajectories despite inconsistencies in battery levels.</p>
-                <p>The implementation of libraries throughout this project highlighted the importance of being able to read and comprehend other people's code. Many issues during the implementation process arose from not fully understanding the purpose of functionality of the code. However, once I took the time to read through and understand the code, tuning it for my specific situation became much easier.</p>
-                <p>While working with the OpenCV Vision Library I had to familiarize myself with concepts such as Gaussian blur, which is used to reduce noise and smooth images for better vision processing. This comprehension was crucial for accurately reading and interpreting the vision tuning numbers. Additionally, I had to learn how the library handles adjustments of bounding box sizes and placement along with the hue range adjustments. Understanding how to properly use the library lead to consistent and reliable vision sensing.</p>
-
-                <figure>
-                    <img src="./images/confusion.png" alt="Kate confused with 3 laptops">
-                    <figcaption>Some days were full of confusion...</figcaption>
-                </figure>
-
-                <p><strong>Project Documentation:</strong></p>
-
-                <div class="milestones-container">
-                    <!-- Control Award -->
-                    <figure>
-                        <a
-                            href="https://docs.google.com/presentation/d/1e111cMuZ5l06iNjhdlawA3Fr7H6VSzxAxaPLuBcEzII/edit?usp=sharing" target="_blank">
-                            <img src="./images/controlDoc.png" alt="Control Award Submission">
-                            <figcaption>Control (Programming) Award Submission:</figcaption>
-                        </a>
-                    </figure>
-
-                    <!-- Software Notebook -->
-                    <figure>
-                        <a
-                            href="https://docs.google.com/presentation/d/1LBSXb3CYa38pA_WcP5y6NjGr1qkPAJJjJWLEOPgY4DE/edit?usp=sharing" target="_blank">
-                            <img src="./images/softwareNotebook.png" alt="Software Technical Binder">
-                            <figcaption>Software Technical Documentation</figcaption>
-                        </a>
-                    </figure>
-
-                </div>
-
-            </div>
         </div>
-        <!-- End robot autonomous code project -->
+        <!-- End Course Website project -->
 
         <div class="project">
-            <h4></h4>
+            <h4>Single File Hobby Website</h4>
 
             <div class="content-container">
 
                 <div class="left-content">
 
-                    <p><strong>Project: </strong></p>
+                    <p><strong>Course: </strong>ITIS 3135 - Web-Based Application Design and Development</p>
                     
-                    <p><strong>Project Objective: </strong></p>
+                    <p><strong>Date: </strong>Fall 2024</p>
+
+                    <p><strong>Project Objective: </strong>Develop a website for a hobby of your choice that has multiple pages relating to the selected hobby. The entire site must be a single .html file and utilize JavaScript to switch the pages and their content.</p>
+
+                    <p><strong>Link: </strong><a href="https://webpages.charlotte.edu/khicks35/itis3135/hobby/">https://webpages.charlotte.edu/khicks35/itis3135/hobby/</a></p>
                     
-                    <p><strong>Language: </strong></p>
+                    <p><strong>Languages: </strong>HTML, CSS, &amp; JavaScript.</p>
 
-                    <p><strong>Applied Skills &amp; Concepts: </strong></p>
+                    <p><strong>Certifications: </strong><a href="https://www.freecodecamp.org/certification/katehi/responsive-web-design">FCC Responsive Web Design</a> &amp; <a href="https://www.freecodecamp.org/certification/katehi/javascript-algorithms-and-data-structures-v8">JavaScript Algorithms and Data Structures</a></p>
 
-                    <a href="" class="github-button" target="_blank">
+                    <p><strong>Applied Skills &amp; Concepts: </strong>CSS and JavaScript interactions, DOM Manipulation, Dynamic page interactions, &amp; Embedded Stylesheets and JavaScripts. </p>
+
+                    <p><strong>Key Learnings &amp; Takeaways: </strong>Having a multi-page website within a single file initially seemed like a daunting task. However, it turned out to be much simpler than I had anticipated. This project highlighted the power of using CSS classes effectively and emphasized the importance of integrating HTML, CSS, and JavaScript as interconnected tools rather than separate entities. By simply toggling the visibility of content, the website was able to function seamlessly on the user's side, mimicking the behavior of a site with multiple files. Web development sometimes can feel redundant but through this project I was able to engage with solving a web related problem!</p>
+
+                    <a href="https://github.com/katehx/katehx.github.io/tree/main/itis3135/hobby" class="github-button" target="_blank">
                         <img src="images/github-mark-white.svg" alt="GitHub Logo" width="30" height="30">
                         GitHub Repository
                     </a>
@@ -215,33 +274,74 @@
                 </div>
 
                 <div class="iframe-container">
-                    <iframe src="" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Gr2a6qVeX-E" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- End Hobby Website project -->
+
+        <div class="project">
+            <h4>Client Project Website</h4>
+
+            <div class="content-container">
+
+                <div class="left-content">
+
+                    <p><strong>Course: </strong>ITIS 3135 - Web-Based Application Design and Development</p>
+                    
+                    <p><strong>Date: </strong>Fall 2024</p>
+
+                    <p><strong>Project Objective: </strong>Work with a client from outside of the class to develop a website for their business. This project places a strong emphasis on functionality of the website and dynamic JavaScript interactions for the website visitors.</p>
+                    
+                    <p><strong>Link: </strong><a href="https://excaliburtees.com">https://excaliburtees.com</a></p>
+
+                    <p><strong>Languages: </strong>HTML, CSS, &amp; JavaScript.</p>
+
+                    <p><strong>Certifications: </strong><a href="https://www.freecodecamp.org/certification/katehi/responsive-web-design">FCC Responsive Web Design</a> &amp; <a href="https://www.freecodecamp.org/certification/katehi/javascript-algorithms-and-data-structures-v8">JavaScript Algorithms and Data Structures</a></p>
+                    <p><strong>Applied Skills &amp; Concepts: </strong>Client Collaboration, Brand Development, User-Centered Design, JavaScript Interaction with User Input, Functional Contact Forms, &amp; Interaction with API.</p>
+
+                    <p><strong>Key Learnings &amp; Takeaways: </strong>Developing a website for an external client brought a new way of thinking to the design process. I had to create a product that effectivly showed a product to potential customers, made it easy for customers to understand how to make purchases, and also tell the story of the company. This project resulted in me not only developing a website but also helping to develop a brand for this young small business. Implementing multiple JavaScript functionalities had its difficulties but the end result was extremely satisfying to see. At times the DOM was difficult to manage, and having multiple JavaScript functionalities on one page could cause overlap issues. Through keeping my ids and classes organized I was able to successfully get all of my functinalties working the way I hoped.</p>
+
+                    <a href="https://github.com/katehx/katehx.github.io/tree/main/itis3135/excaliburtees.com" class="github-button" target="_blank">
+                        <img src="images/github-mark-white.svg" alt="GitHub Logo" width="30" height="30">
+                        GitHub Repository
+                    </a>
+
+                </div>
+
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/Up--1dhVAt0" frameborder="0" allowfullscreen></iframe>
                 </div>
 
             </div>
 
             <button class="accordion">More Project Information</button>
             <div class="panel">
-                
-                <p><strong>Key Learnings &amp; Takeaways: </strong></p>
-                
+
                 <p><strong>Project Documentation:</strong></p>
 
                 <div class="milestones-container">
-                    <!--  -->
+                    <!-- Client Project Documentation -->
                     <figure>
                         <a
-                            href="" target="_blank">
-                            <img src="./images/" alt="">
-                            <figcaption></figcaption>
+                            href="https://docs.google.com/document/d/1FMdFyNbe01ZfkFjKj3vefw968yFXf4qnsPQp819hbnk/edit?usp=sharing" target="_blank">
+                            <img src="./images/clientProject.png" alt="">
+                            <figcaption>Project Submission Documentation</figcaption>
                         </a>
                     </figure>
 
                 </div>
+                         
+                <p><strong>Final Presentation:</strong></p>
+                    <div class="iframe-container">
+                        <iframe src="https://www.youtube.com/embed/GqBGsMrb55k" frameborder="0" allowfullscreen></iframe>
+                    </div>
 
             </div>
         </div>
-        <!-- End  project -->
+        <!-- End Client Website project -->
 
     </main>
 
