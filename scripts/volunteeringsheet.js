@@ -51,7 +51,7 @@ function processAndRenderData(data) {
 
             // Style the "Multi-day Event" column
             if (index === 4) {
-                const isMultiDay = cell?.toLowerCase() === 'true';
+                const isMultiDay = cell && cell.toLowerCase() === 'true';
                 td.innerHTML = isMultiDay
                     ? '<span class="checkmark">&#10003;</span>'
                     : '<span class="cross">&#10007;</span>';
@@ -84,7 +84,6 @@ function processAndRenderData(data) {
     `;
 }
 
-
 function calculateTotals(rows) {
     let totalDays = 0;
     let totalHours = 0;
@@ -93,7 +92,7 @@ function calculateTotals(rows) {
     rows.forEach(row => {
         const startDate = new Date(row[4]); // Start Date (Column D)
         const endDate = row[5] ? new Date(row[5]) : startDate; // End Date (Column E)
-        const multiDay = row[6]?.toLowerCase() === 'true'; // Multi-day Event (Column F)
+        const multiDay = row[6] && row[6].toLowerCase() === 'true'; // Multi-day Event (Column F)
         const hours = parseFloat(row[9]) || 0; // Hours (Column J)
         const distance = (parseFloat(row[3]) || 0) * 2; // Round-trip distance (Column C)
 
@@ -111,10 +110,10 @@ function calculateTotals(rows) {
         totalDistance += distance;
     });
 
-    return { 
+    return {
         events: rows.length, // Total number of rows
-        days: Math.round(totalDays), 
-        hours: Math.round(totalHours), 
+        days: Math.round(totalDays),
+        hours: Math.round(totalHours),
         distance: formatNumber(totalDistance)
     };
 }
