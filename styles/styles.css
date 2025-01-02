@@ -12,6 +12,9 @@
     --git-button: #24292e;
     --button-hover: #ac47c8;
     --button-inactive: #474646;
+    --ftc: #F57F26;
+    --fll: #E61B23;
+    --frc: #0097D0;
 }
 
 main {
@@ -40,7 +43,6 @@ h2 {
     color: var(--title-text);
 }
 
-/* not currently in use? */
 h3 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 30px;
@@ -52,6 +54,13 @@ h4 {
     font-size: 30px;
     color: var(--title-text);
     margin: 0 0 20px 0;
+}
+
+h5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    color: var(--title-text);
+    margin: 0;
 }
 
 html {
