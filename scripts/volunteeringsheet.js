@@ -1,6 +1,6 @@
-const apiKey = 'AIzaSyCuN42Fb6wmRUCBy9NsLJGBmprLsDXhYWU'; // Your API key
-const spreadsheetId = '1esG15uxdWLtVEKAXmgw4lLYLnhSnbD5sqs3clW-AFqk'; // Replace with your spreadsheet ID
-const range = 'FIRSTVolunteering!A1:K100'; // Adjusted to include all columns
+const apiKey = 'AIzaSyCuN42Fb6wmRUCBy9NsLJGBmprLsDXhYWU';
+const spreadsheetId = '1esG15uxdWLtVEKAXmgw4lLYLnhSnbD5sqs3clW-AFqk';
+const range = 'FIRSTVolunteering!A1:K100';
 
 async function fetchSheetData() {
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=${apiKey}`;
@@ -20,7 +20,7 @@ async function fetchSheetData() {
 function processAndRenderData(data) {
     const tableHead = document.querySelector('#volunteering-data thead tr');
     const tableBody = document.querySelector('#volunteering-data tbody');
-    const statsElement = document.querySelector('#volunteering-stats');
+    const statsContainer = document.querySelector('#stats-container');
 
     tableHead.innerHTML = ''; // Clear previous headers
     tableBody.innerHTML = ''; // Clear previous rows
@@ -34,9 +34,10 @@ function processAndRenderData(data) {
     });
 
     // Populate table rows and filter necessary columns
-    const rows = data.slice(1); // Exclude header row
+    const rows = data.slice(1);
     rows.forEach(row => {
-        const filteredRow = [
+        const tr = document.createElement('tr');
+        [
             row[0], // Event
             row[2], // State
             row[4], // Start Date
@@ -45,11 +46,27 @@ function processAndRenderData(data) {
             row[7], // Role
             row[8], // Program
             row[9], // Hours
-        ];
-        const tr = document.createElement('tr');
-        filteredRow.forEach(cell => {
+        ].forEach((cell, index) => {
             const td = document.createElement('td');
-            td.textContent = cell || ''; // Handle empty cells
+
+            // Style the "Multi-day Event" column
+            if (index === 4) {
+                const isMultiDay = cell?.toLowerCase() === 'true';
+                td.innerHTML = isMultiDay
+                    ? '<span class="checkmark">&#10003;</span>'
+                    : '<span class="cross">&#10007;</span>';
+            }
+            // Style the "Program" column
+            else if (index === 6) {
+                if (cell === 'FLL' || cell === 'FTC' || cell === 'FRC') {
+                    td.innerHTML = `<span class="program ${cell}">${cell}</span>`;
+                } else {
+                    td.textContent = cell || ''; // Default text for other cases
+                }
+            } else {
+                td.textContent = cell || ''; // Handle empty cells
+            }
+
             tr.appendChild(td);
         });
         tableBody.appendChild(tr);
@@ -58,15 +75,15 @@ function processAndRenderData(data) {
     // Calculate statistics
     const totals = calculateTotals(rows);
 
-    // Display stats
-    statsElement.innerHTML = `
-        <h4>Volunteering Stats</h4>
-        <p><strong>Total Events:</strong> ${totals.events}</p>
-        <p><strong>Total Days:</strong> ${totals.days}</p>
-        <p><strong>Total Hours:</strong> ${totals.hours}</p>
-        <p><strong>Total Distance Traveled:</strong> ${totals.distance} miles</p>
+    // Display stats in bubbles
+    statsContainer.innerHTML = `
+        <div class="stats-bubble"><strong>Total Events:</strong> ${totals.events}</div>
+        <div class="stats-bubble"><strong>Total Days:</strong> ${totals.days}</div>
+        <div class="stats-bubble"><strong>Total Hours:</strong> ${totals.hours}</div>
+        <div class="stats-bubble"><strong>Total Distance Traveled:</strong> ${totals.distance} miles</div>
     `;
 }
+
 
 function calculateTotals(rows) {
     let totalDays = 0;

@@ -17,6 +17,10 @@
     --frc: #0097D0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 main {
     background: var(--white);
     margin: 10px 5%;
@@ -413,4 +417,152 @@ th {
     background-color: var(--main);
     color: var(--white);
     pointer-events: none;
+}
+
+/* Volunteer table */
+.checkmark {
+    color: green;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.cross {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Program Bubble Styling */
+.program {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.FLL {
+    background-color: var(--fll);
+}
+
+.FTC {
+    background-color: var(--ftc);
+}
+
+.FRC {
+    background-color: var(--frc);
+}
+
+/* Statistics Container */
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Statistics Bubble */
+.stats-bubble {
+    background-color: var(--button-inactive);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.stats-bubble:hover {
+    background-color: var(--button-hover);
+    color: var(--white);
+}
+
+/* Special text styling */
+.note {
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* divider line */
+.divider {
+    border: none;
+    height: 2px;
+    background-color: var(--light-grey);
+    margin: 20px 0;
+    width: 80%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* image and text display */
+
+/* Divider container */
+.text-image-stack-divider {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--light-grey); /* Optional background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Text content (left side, 60% width) */
+.text-content {
+    flex: 1 1 60%;
+    color: var(--black);
+}
+
+/* Image stack (right side, 40% width) */
+.image-stack {
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between images */
+}
+
+.image-stack figure {
+    text-align: center;
+}
+
+.image-stack img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-stack figcaption {
+    margin-top: 8px;
+    font-size: 16px;
+    color: var(--black);
+}
+
+/* Skip to content button */
+.skip-button {
+    display: inline-block;
+    padding: 10px 15px;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--main);
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.skip-button:hover {
+    background-color: var(--accent);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.skip-button:active {
+    transform: translateY(0);
 }
