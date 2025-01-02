@@ -1,17 +1,16 @@
 :root {
     --white: #FAF9F6;
     --black: #1C1C1C;
-    --light-grey: #e4e4e4;
+    --light-grey: #e2e2e2;
     --main: #2f746b;
-    --accent: #40c2af;
-    --panel: #d6f0f5;
-    --dark: #0C1C1A;
-    --dark2: #1F4743;
+    --accent: #c24ae3;
+    --panel: #d2cee8;
     --title-text: #204642;
-    --text-hover: #d53b14;
+    --link-text: #590371;
+    --text-hover: #faff6b;
     --nav-hover: #204642;
     --button: #24292e;
-    --button-hover: #444d56;
+    --button-hover: #ac47c8;
     --button-inactive: #474646;
 }
 
@@ -62,7 +61,7 @@ html {
 
 a {
     text-decoration: none;
-    color: green;
+    color: var(--link-text);
     font-weight: 600;
 }
 
@@ -153,6 +152,7 @@ footer p {
     padding: 2%;
     border-radius: 10px;
     margin-bottom: 2%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Text content + video panel */
